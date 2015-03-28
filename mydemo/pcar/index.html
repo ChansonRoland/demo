@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>大众西区</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<link rel="stylesheet" href="css/index.css">
+	<script src="js/jquery-1.8.1.min.js"></script>
+    <script src="js/iScroll v4.2.5.js"></script>
+    <script src="js/json.js"></script>
+</head>
+<body onload="resetPage()">
+<div class="frame">
+	<div class="top">
+		<img src="images/bj.jpg" alt="">
+	</div>
+	<div class="bj"></div>
+	<div class="main">
+		<div class="tab">
+			<a href="###" class="order"></a>
+			<a href="###" class="introduce"></a>
+			<a href="###" class="enjoy"></a>
+		</div>
+		<div class="main_order">
+			<input type="text" class="name">
+			<input type="text" class="phone">
+			<select name="" id="" class="province" onchange="p_change();"></select>
+			<select name="" id="" class="city" onchange="d_change();"></select>
+			<select name="" id="" class="dealer"></select>
+			<a href="###" class="sub">确认提交</a>
+			<p>*您的个人资料有可能会提交至一汽一大众厂商的授权经销商与您进一步沟通试驾购车事宜。</p>
+		</div>
+		<div class="main_introduce"></div>
+		<div class="main_enjoy">
+			<img src="images/left.png" alt="" class="left1">
+			<img src="images/right.png" alt="" class="right1">
+			<div id="roll">
+	            <ul id="scroller">
+	                <li><img src="images/img5.jpg" alt="###"></li>
+	                <li><img src="images/img1.jpg" alt="###"></li>
+	                <li><img src="images/img2.jpg" alt="###"></li>
+	                <li><img src="images/img3.jpg" alt="###"></li>
+	                <li><img src="images/img4.jpg" alt="###"></li>
+	                <li><img src="images/img5.jpg" alt="###"></li>
+	                <li><img src="images/img1.jpg" alt="###"></li>
+	            </ul>
+	        </div>
+	        <img src="images/left.png" alt="" class="left2">
+			<img src="images/right.png" alt="" class="right2">
+	        <div id="roll2">
+	            <ul id="scroller2">
+	                <li><img src="images/img10.jpg" alt="###"></li>
+	                <li><img src="images/img6.jpg" alt="###"></li>
+	                <li><img src="images/img7.jpg" alt="###"></li>
+	                <li><img src="images/img8.jpg" alt="###"></li>
+	                <li><img src="images/img9.jpg" alt="###"></li>
+	                <li><img src="images/img10.jpg" alt="###"></li>
+	                <li><img src="images/img6.jpg" alt="###"></li>
+	            </ul>
+	        </div>
+		</div>
+	</div>
+</div>
+</body>
+<script>
+/*屏幕自适应*/
+function resetPage() {
+    var deviceWidth = document.documentElement.clientWidth,
+    scale = deviceWidth / 320;
+    document.body.style.zoom = scale;
+}
+window.onresize = function () {
+    resetPage();
+}
+
+/*Tab切换*/
+$('.order').click(function(){
+	$('.main_order').css('display','block');
+	$('.main_introduce').css('display','none');
+	$('.main_enjoy').css('display','none');
+	$('.bj').css('height','360px');
+	$('.frame').css('height','560px');
+});
+$('.introduce').click(function(){
+	clearTimeout(time);
+	$('.main_order').css('display','none');
+	$('.main_introduce').css('display','block');
+	$('.main_enjoy').css('display','none');
+	$('.bj').css('height','670px');
+	$('.frame').css('height','870px');
+});
+var time = null;
+$('.enjoy').click(function(){
+	clearTimeout(time);
+	$('.main_order').css('display','none');
+	$('.main_introduce').css('display','none');
+	$('.main_enjoy').css('display','block');
+	$('.bj').css('height','400px');
+	$('.frame').css('height','600px');
+	/*轮播图*/
+	var num = 0;
+	var num2 = 0;
+	var myscroll = new iScroll("roll", {
+	    hScrollbar: false, vScrollbar: false, snap: true,momentum:false, onScrollEnd: function () {
+	        num = this.currPageX;
+	        console.log(num);
+	        if(num == 6){
+	            myscroll.scrollToPage(1,0,0);
+	        }
+	        if(num == 0){
+	            myscroll.scrollToPage(5,0,0);
+	        }
+	    }
+	});
+	myscroll.scrollToPage(1,0,0);
+	var myscroll2 = new iScroll("roll2", {
+	    hScrollbar: false, vScrollbar: false, snap: true,momentum:false, onScrollEnd: function () {
+	        num2 = this.currPageX;
+	        console.log(num2);
+	        if(num2 == 6){
+	            myscroll.scrollToPage(1,0,0);
+	        }
+	        if(num2 == 0){
+	            myscroll.scrollToPage(5,0,0);
+	        }
+	    }
+	});
+	myscroll.scrollToPage(1,0,0);
+	myscroll2.scrollToPage(1,0,0);
+	time = setInterval(function(){
+	    num ++;
+	    num2 ++;
+	    myscroll.scrollToPage(num,0,500);
+	    myscroll2.scrollToPage(num2,0,500);
+	},3000);
+});
+/*tab切换*/
+var tab = document.getElementsByClassName('tab')[0];
+var a = tab.getElementsByTagName('a');
+for(var i = 0;i < a.length;i ++){
+	a[i].index = i;
+	a[i].onclick = function(){
+		for(var j = 0;j < a.length;j ++){
+			tab.style.backgroundImage = 'none';
+		}
+		tab.style.backgroundImage = 'url(images/tab'+(this.index+1)+'.png)';
+	}
+}
+/*级联菜单*/
+function init(){
+	for (var j = 0; j < excel.length; j++) {
+        $(".province").append($("<option value='" + excel[j].pId + "'>" + excel[j].pName + "</option>"));
+    }
+    p_change(); 
+}
+function p_change() {
+    $(".city").html("...");
+    c_change();
+    $(".dealer").html("...");
+    d_change();
+}
+function c_change() {
+    for (var j = 0; j < excel.length; j++) {
+        console.log($(".province").val());
+        if (parseInt($(".province").val()) == excel[j].pId) {
+             for (var i = 0; i < excel[j].Cities.length; i++) {
+                $(".city").append($("<option value='" + excel[j].Cities[i].cId + "'>" + excel[j].Cities[i].cName + "</option>"));
+             }
+        }
+    }
+    d_change();
+}
+function d_change() {
+	$(".dealer").html("...");
+     for (var j = 0; j < excel.length; j++) {
+        if (parseInt($(".province").val()) == excel[j].pId) {
+             for (var i = 0; i < excel[j].Cities.length; i++) {
+                if (parseInt($(".province").val()) == excel[j].pId && parseInt($(".city").val()) == excel[j].Cities[i].cId) {
+                    for (var k = 0; k < excel[j].Cities[i].Dealers.length; k++) {
+                        $(".dealer").append($("<option>" + excel[j].Cities[i].Dealers[k] + "</option>"));
+                        // value='" + excel[j].Cities[i].Dealers[k].dCode + "'
+                    }
+                }   
+            }  
+        }
+    }
+}
+init();
+/*提交数据*/
+var patrn=/^(13[0-9]|14[0-9]|15[0-9]|18[0-9])\d{8}$$/;
+$('.sub').click(function(){
+	if(!$('.name').val()){
+		alert('请输入姓名！');
+		return false;
+	}
+	if($('.phone').val() == "" || !patrn.test($('.phone').val())){
+		alert('请输入正确的手机号！');
+		return false;
+	}
+	var url = 'http://ama.adwo.com/advmessage/adv/addResultJsonP.action?advid=30124&realname=' + $('.name').val() + '&mobile=' + $('.phone').val() + '&provincename=' + $(".province").find("option:selected").text() + '&cityname=' + $(".city").find("option:selected").text() + '&expand1=' + $(".dealer").find("option:selected").text();
+	$.ajax({
+        type: "get",
+        url: url,
+        dataType : 'jsonp',
+        success: function (data) {
+        	alert('提交成功！');
+        },  
+        error:function(data){
+            alert("网络错误,请查看您的网络!");
+        }
+    });
+});
+</script>
+</html>

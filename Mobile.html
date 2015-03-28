@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mobile</title>
+	<link rel="stylesheet" href="stylesheets/Mobile.css">
+</head>
+<body onload="resetPage();">
+<div class="frame">
+	<p class="header">我的案例</p>
+	<div class="content">
+		<ul>
+			<li>
+				<a href="mydemo/Beetle/index.html"><img src="images/Beetle.png" alt=""></a>
+				<p>甲壳虫</p>
+			</li>
+			<li>
+				<a href="mydemo/gx7/index.html"><img src="images/gx7.png" alt=""></a>
+				<p>GX7</p>
+			</li>
+			<li>
+				<a href="mydemo/pcar/index.html"><img src="images/pcar.png" alt=""></a>
+				<p>大众西区</p>
+			</li>
+			<li>
+				<a href="mydemo/webcpa/index.html"><img src="images/webcpa.png" alt=""></a>
+				<p>WEBCPA</p>
+			</li>
+			<li>
+				<a href="mydemo/webcpa2/index.html"><img src="images/webcpa2.png" alt=""></a>
+				<p>WEBCPA2</p>
+			</li>
+			<li>
+				<a href="http://catwaji.mobileone.com.cn/"><img src="images/cat.png" alt=""></a>
+				<p>CAT挖机</p>
+			</li>
+			<li>
+				<a href="mydemo/skd/skd.html"><img src="images/skd.png" alt=""></a>
+				<p>聪明达人</p>
+			</li>
+			<li>
+				<a href="mydemo/gord/index.html"><img src="images/gord.png" alt=""></a>
+				<p>蒙迪欧</p>
+			</li>
+		</ul>
+	</div>
+</div>
+</body>
+<script>
+/*屏幕自适应*/
+function resetPage() {
+    var deviceWidth = document.documentElement.clientWidth,
+    scale = deviceWidth / 320;
+    document.body.style.zoom = scale;
+}
+window.onresize = function () {
+    resetPage();
+}
+</script>
+</html>

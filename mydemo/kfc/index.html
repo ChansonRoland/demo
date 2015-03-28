@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)http://pc.hezhanglin.com:33/h5/ad/kfc_mobile2/ -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+    	<title>肯德基手机网</title>
+		<link rel="apple-touch-icon-precomposed" href="http://pc.hezhanglin.com:33/h5/ad/kfc_mobile2/common/icon.jpg">
+        <link rel="stylesheet" type="text/css" href="./kfc_files/reset.css">
+        <link rel="stylesheet" type="text/css" href="./kfc_files/index.css">
+		<script type="text/javascript" async="" src="./kfc_files/t.js"></script><script src="./kfc_files/channel.js"></script>
+        <script src="./kfc_files/jquery-1.4.4.min.js"></script>
+		<script src="./kfc_files/jquery.cookie.js"></script>
+        <script src="./kfc_files/trackEvent.js"></script>
+        <script src="./kfc_files/sdc_MobWeb.js"></script>
+        <script src="./kfc_files/iscroll.js"></script>
+		<script src="./kfc_files/citys.js"></script>
+		<script type="text/javascript" src="./kfc_files/api"></script><script type="text/javascript" src="./kfc_files/getscript"></script>
+		<script type="text/javascript" src="./kfc_files/tractEventJsonP.action"></script>
+		<script type="text/javascript" src="./kfc_files/tractEventJsonP(1).action"></script>
+
+ <!--        <style>
+        	#ul,#ul2{
+        		position: relative;
+        	}
+			#a1{
+				position: absolute;
+				-webkit-animation:ro1 10s linear 0s infinite alternate;
+			}
+			#a2{
+				/*position: absolute;*/
+				-webkit-animation:ro2 10s linear 0s infinite alternate;
+			}
+			#li1{
+				position: absolute;
+				margin-left: 42px; 
+				-webkit-animation:ro3 10s linear 0s infinite alternate;
+			}
+			#li2{
+				/*position: absolute;*/
+				-webkit-animation:ro4 10s linear 0s infinite alternate;
+			}
+			@-webkit-keyframes ro1{
+			    0%  {opacity: 1;display: block;}
+			    10% {opacity: 1;display: block;}
+			    20% {opacity: 1;display: block;}
+			    30% {opacity: 1;display: block;}
+			    40% {opacity: 1;display: block;}
+			    50% {opacity: 1;display: block;}
+			    60% {opacity: 0;display: none;}
+			    70% {opacity: 0;display: none;}
+				80% {opacity: 0;display: none;}
+			    90% {opacity: 0;display: none;}
+			    100%{opacity: 0;display: none;}
+			}
+			@-webkit-keyframes ro2{
+			    0%  {opacity: 0;display: none;}
+			    10% {opacity: 0;display: none;}
+			    20% {opacity: 0;display: none;}
+			    30% {opacity: 0;display: none;}
+			    40% {opacity: 0;display: none;}
+			    50% {opacity: 0;display: none;}
+			    60% {opacity: 1;display: block;}
+			    70% {opacity: 1;display: block;}
+				80% {opacity: 1;display: block;}
+			    90% {opacity: 1;display: block;}
+			    100%{opacity: 1;display: block;}
+			}
+			@-webkit-keyframes ro4{
+			   0%  {opacity: 1;display: block;}
+			    10% {opacity: 1;display: block;}
+			    20% {opacity: 1;display: block;}
+			    30% {opacity: 1;display: block;}
+			    40% {opacity: 1;display: block;}
+			    50% {opacity: 1;display: block;}
+			    60% {opacity: 0;display: none;}
+			    70% {opacity: 0;display: none;}
+				80% {opacity: 0;display: none;}
+			    90% {opacity: 0;display: none;}
+			    100%{opacity: 0;display: none;}
+			}
+			@-webkit-keyframes ro3{
+			   0%  {opacity: 0;display: none;}
+			    10% {opacity: 0;display: none;}
+			    20% {opacity: 0;display: none;}
+			    30% {opacity: 0;display: none;}
+			    40% {opacity: 0;display: none;}
+			    50% {opacity: 0;display: none;}
+			    60% {opacity: 1;display: block;}
+			    70% {opacity: 1;display: block;}
+				80% {opacity: 1;display: block;}
+			    90% {opacity: 1;display: block;}
+			    100%{opacity: 1;display: block;}
+			}
+        </style> -->
+        <style>
+        	#ul{
+        		height:144px;
+				inline-height:144px;
+        		position: relative;
+        	}
+        	#a1,#a2{
+        		position: absolute;
+        		top: 0;
+        	}
+			.marquee{
+				position:absolute;
+				top:0px;
+				left:50px;
+				
+				animation: myfirst 5s;
+				-moz-animation: myfirst 5s;	/* Firefox */
+				-webkit-animation: myfirst 5s;	/* Safari 和 Chrome */
+				-o-animation: myfirst 5s;	/* Opera */
+			}
+			@keyframes myfirst{
+				from {left: 50px;}
+				to {left: -170px;}
+			}
+			/* Firefox */
+			@-moz-keyframes myfirst {
+				from {left: 50px;}
+				to {left: -170px;}
+			}
+
+			/* Safari 和 Chrome */
+			@-webkit-keyframes myfirst{
+				from {left: 50px;}
+				to {left: -170px;}
+			}
+			
+			/* Opera */
+			@-o-keyframes myfirst{
+				from {left: 50px;}
+				to {left: -170px;}
+			}
+        </style>
+    </head>
+    
+    <body>
+    
+    	<div class="container">
+        	
+            <figure id="header">
+				<div style="position: absolute;left: 2%;top: 28%;height: 58%;cursor:pointer;" onclick="yumTrack(&#39;主页供应商&#39;,&#39;到供应商QA&#39;,&#39;supplier/index.html&#39;);"><img id="toprovider" style="width:6em;" src="./kfc_files/toprovider.png" alt=""></div>
+            	<img id="logo" src="./kfc_files/logo.png" alt="">
+				<div id="location" onclick="location=&#39;list.html&#39;">北京市</div>
+            </figure>
+            
+			<figure>
+            	 <img id="c1_1" src="./kfc_files/c1_1.png" alt="">
+				<img id="c1_1-3" src="./kfc_files/c1_1_3.png" alt="" class="fly">
+				<!-- <img id="c1_1-4" src="common/c1_1_4.png" alt="" class="fly" /> -->
+				<a id="c1_1_1" href="javascript:yumTrack('立即订餐','立即订餐','http://m.4008823823.com.cn/kfcmwos/index.htm?utm_campaign=ownmedia&utm_source=kfcwapsite&utm_content=toplefticon&utm_medium=hpmainnav');" class="fly"></a>
+				<a id="c1_1_2" href="javascript:yumTrack('附近KFC','点击附近KFC','store');" class="fly"></a>
+				<a id="c1_1_3" href="javascript:yumTrack('关注微博','点击关注微博','http://m.weibo.cn/u/1687422352?');" class="fly"></a>
+				<a id="c1_1_4" href="javascript:yumTrack('优惠劵','点击优惠劵','http://youhui.kfc.com.cn/mobile/');" class="fly"></a>
+				<a id="c1_1_5" href="javascript:weixin();" class="fly"></a>
+            </figure>
+			<figure id="banner_small">
+            	<ul id="ul" style="height: 344.012965964344px;">
+            		<!-- <li id="a6" class="li-image">
+            								<a  href="javascript:yumTrack('焦点图','点击焦点图','http://zhaji.kfc.com.cn');">
+            									<img id="img_x4" src="common/b0.jpg"/>
+            								</a>
+            							</li> -->
+					<li id="a11" class="li-image" style="display: none;">
+						<a href="javascript:yumTrack('焦点图','点击焦点图','http://kfc.youku.com/');">
+							<img id="img_x7" src="./kfc_files/b16.jpg">
+						</a>
+					</li>
+					<li id="a11" class="li-image" style="display: none;">
+						<a href="javascript:yumTrack('焦点图','点击焦点图','http://m.kfc.com.cn/jbtc/index.html');">
+							<img id="img_x7" src="./kfc_files/b15.jpg">
+						</a>
+					</li>
+					<li id="a10" class="li-image" style="display: list-item;">
+						<a href="javascript:yumTrack('焦点图','点击焦点图','http://exo.kfc.com.cn');">
+							<img id="img_x7" src="./kfc_files/b14.jpg">
+						</a>
+					</li>
+            		<!-- <li id="a9" class="li-image">
+            								<a id="snow" href="javascript:;">
+            									<img id="img_x6" src="common/b13.jpg"/>
+            								</a>
+            							</li> -->
+					<!-- <li id="a8" class="li-image">
+						<a  href="javascript:yumTrack('焦点图','点击焦点图','http://youhui.kfc.com.cn/mobile/');">
+							<img id="img_x4" src="common/b112.jpg"/>
+						</a>
+					</li> -->
+            		<li id="a7" class="li-image" style="display: none;">
+						<a id="a7_xx" href="javascript:;">
+							<img id="img_x5" src="./kfc_files/b_j8.jpg">
+						</a>
+					</li>
+					<!--<li id="a6" class="li-image">
+						<a  href="javascript:yumTrack('焦点图','点击焦点图','http://chitong1.kfc.com.cn/');">
+							<img id="img_x4" src="common/b_7.jpg"/>
+						</a>
+					</li>-->
+					<!--<li id="a6" class="li-image">
+						<a  href="javascript:yumTrack('焦点图','点击焦点图','http://m.kfc.com.cn/rice/index.html');">
+							<img id="img_x4" src="common/b_j1.jpg"/>
+						</a>
+					</li>-->
+					<!-- <li id="a6" class="li-image">
+						<a  href="javascript:yumTrack('焦点图','点击焦点图','m.kfc.com.cn/rice/index.html');">
+							<img id="img_x4" src="common/b_j1.jpg"/>
+						</a>
+					</li> -->
+					<!-- <li id="a5" class="li-image">
+						<a  href="javascript:yumTrack('焦点图','点击焦点图','m.kfc.com.cn/dessert/index.html');">
+							<img id="img_x4" src="common/b_j2.jpg"/>
+						</a>
+					</li> -->
+					<!-- <li id="a5" class="li-image">
+						<a  href="javascript:yumTrack('焦点图','点击焦点图','http://m.kfc.com.cn/dessert/index.html');">
+							<img id="img_x4" src="common/b_j2.jpg"/>
+						</a>
+					</li> -->
+					<li id="a4" class="li-image" style="display: none;">
+						<a href="javascript:yumTrack('焦点图','点击焦点图','http://m.kfc.com.cn/breakfast/index.html');">
+							<img id="img_x4" src="./kfc_files/b_b0.jpg">
+						</a>
+					</li>
+					<li id="a3" class="li-image" style="display: none;">
+						<a href="javascript:yumTrack('焦点图','点击焦点图','supplier/index.html');">
+							<img id="img_x3" src="./kfc_files/b11.jpg">
+						</a>
+					</li>
+					<li id="a1" class="li-image" style="display: none;">
+						<a href="javascript:yumTrack('焦点图','点击焦点图','http://youhui.kfc.com.cn/mobile/');">
+							<img id="img_x2" src="./kfc_files/b6.jpg">
+						</a>
+					</li>
+					<!-- <li id="a4" class="li-image">
+						<a  href="javascript:yumTrack('焦点图','点击焦点图','http://8fen.kfc.com.cn/mobile/');">
+							<img id="img_x4" src="common/b9.jpg"/>
+						</a>
+					</li> -->
+					<!-- <li id="a3" class="li-image">
+						<a  href="javascript:yumTrack('焦点图','点击焦点图','http://kfcdrink.qq.com/wap');">
+							<img id="img_x3" src="common/b10.jpg"/>
+						</a>
+					</li> -->
+					
+					<!-- <li id="a1" class="li-image">
+						<a  href="javascript:yumTrack('焦点图','点击焦点图','http://m.kfc.com.cn/ttbj/poster');">
+							<img id="img_x1" src="common/b8.jpg"/>
+						</a>
+					</li> -->
+                </ul>
+				<div class="dians">
+<!--
+					
+					<div class="dian selected" item-select="0"></div>
+					<div class="dian" item-select="1"></div>
+-->
+				</div>
+            </figure>
+			<figure id="banner_adtext">
+				<ul id="ul2">
+					<li id="li12" class="li-text" style="display: none;">
+						<a class="adtext" href="http://kfc.youku.com/">全新秘制脆香鸡，炸鸡痛快吃！</a>
+					</li>
+					<li id="li11" class="li-text" style="display: none;">
+						<a class="adtext" href="http://m.kfc.com.cn/jbtc/index.html">买结伴套餐，第二份半价</a>
+					</li>
+					<li id="li10" class="li-text" style="display: list-item;">
+						<a class="adtext" href="http://exo.kfc.com.cn/">集星能优惠卡，抽EXO好礼！</a>
+					</li>
+					<!-- <li id="li9" class="li-text">
+					 	<a class="adtext" id="snow1" >圣诞“壕”礼，通通到我桶里来</a>
+					 </li> --> 
+					<!-- <li id="li8" class="li-text">
+						<a class="adtext" href="http://youhui.kfc.com.cn/mobile/">超值套餐优惠券，仅限1月份</a>
+					</li> -->
+					<!-- <li id="li6" class="li-text">
+						<a class="adtext" href="http://zhaji.kfc.com.cn">四款炸鸡套餐超值心动，想知道女神的选择吗？</a>
+					</li> -->
+					<li id="li7" class="li-text" style="display: none;">
+						<a class="adtext" id="li7_xx_word" href="javascript:;">肯德基APP全新改版上线！</a>
+					</li>
+					<!--<li id="li6" class="li-text">
+						<a class="adtext" href="http://chitong1.kfc.com.cn/">全新翅桶，十翅一桶只要39元！</a>
+					</li>-->
+					<!--<li id="li6" class="li-text">
+						<a class="adtext" href="http://m.kfc.com.cn/rice/index.html">全新升级足料饭，满足你的胃</a>
+					</li>-->
+					<!-- <li id="li5" class="li-text">
+						<a class="adtext" href="http://m.kfc.com.cn/dessert/index.html">甜品第二份半价啦！吃点甜点，便是晴天</a>
+					</li> -->
+					<li id="li4" class="li-text" style="display: none;">
+						<a class="adtext" href="http://m.kfc.com.cn/breakfast/index.html">活力早餐，套餐6元起</a>
+					</li>
+					<li id="li3" class="li-text" style="display: none;">
+						<a class="adtext" href="http://pc.hezhanglin.com:33/h5/ad/kfc_mobile2/supplier/index.html">点击查看供应商名单</a>
+					</li>
+					<li id="li1" class="li-text" style="display: none;">
+						<a class="adtext" href="http://youhui.kfc.com.cn/mobile/">全新早餐优惠券，更多选择，超赞超值！</a>
+					</li>
+					<!--<li id="li4" class="li-text" style="height:100px;">
+						<a class="adtext" href="http://8fen.kfc.com.cn/mobile/">看宇彬欧巴演绎“三观”视频，分享赢好礼</a>
+						<div class="adtext" href="http://8fen.kfc.com.cn/mobile/" style="position:relative;display:block;width:100%;overflow:hidden;color:transparent;">
+							金宇彬代言肯德基八分堡,观看精彩视频
+							<span class="marquee" style="color:#767676;">金宇彬代言肯德基八分堡,观看精彩视频，了解八分青年金宇彬，分享赢好礼。</span>
+						</div>
+					</li>-->
+					<!-- <li id="li3" class="li-text">
+						<a class="adtext" href="http://kfcdrink.qq.com/wap">肯德基夏日酷饮，价低者第二份半价</a>
+					</li> -->
+					
+					<!-- <li id="li1" class="li-text">
+						<a class="adtext" href="http://m.kfc.com.cn/ttbj/poster">明星产品天天半价，火热来袭！</a>
+					</li> -->
+                </ul>
+            </figure>
+			<figure>
+            	<img id="c1_2" src="./kfc_files/c1_2.jpg" alt="">
+				<a id="c1_2_1" class="fly" style="height:50px;"></a>
+				<a id="c1_2_2" class="fly" style="height:50px;"></a>
+				<a id="c1_2_3" class="fly" style="height:50px;"></a>
+            </figure>
+            
+            
+			<figure>
+            	<img id="c1_4" src="./kfc_files/c1_4.png" onclick="location=&#39;http://www.kfc.com.cn/kfccda/index.aspx?from=mobile&#39;" alt="">
+            </figure>
+            
+			
+			<figure>
+            	<img id="c1_3" src="./kfc_files/c1_3_j1.png" alt="">
+				<a id="c1_3_1" href="http://pc.hezhanglin.com:33/h5/ad/kfc_mobile2/breakfast/index.html" class="fly"></a>
+				<a id="c1_3_2" href="http://pc.hezhanglin.com:33/h5/ad/kfc_mobile2/lunch/index.html" class="fly"></a>
+				<a id="c1_3_3" href="http://pc.hezhanglin.com:33/h5/ad/kfc_mobile2/teatime/index.html" class="fly"></a>
+				<a id="c1_3_4" href="http://pc.hezhanglin.com:33/h5/ad/kfc_mobile2/dinner/index.html" class="fly"></a>
+				<a id="c1_3_5" href="http://pc.hezhanglin.com:33/h5/ad/kfc_mobile2/24h/index.html" class="fly"></a>
+            </figure>
+			
+			<div id="c1_box" class="fly">
+				<img src="./kfc_files/s_box.png">
+				<label id="weixinhao" class="fly">微信号：<input type="text" value="肯德基" readonly=""></label>
+				<label id="weixintext" class="fly">请查找公众号“肯德基”, 关注肯德基官方微信。</label>
+			</div>
+        </div>
+	
+    
+        <script>
+		var _i1,_i2,_ci1=1,_ci2=1;
+		$(document).ready(function(e) {
+			track(channel, 4332);
+			/*
+			var liLength = $('#banner_small li'),firstLi='',lastLi='';
+			for(var i=0;i<liLength.length;i++){
+				if(i==0){
+					firstLi = liLength.eq(i).clone();
+				}else if(i==liLength.length-1){
+					lastLi = liLength.eq(i).clone();
+				}
+			}
+			$('#banner_small ul').prepend(lastLi);
+			$('#banner_small ul').append(firstLi);
+			
+			var liLength1 = $('#banner_adtext li'),firstLi='',lastLi='';
+			for(var i=0;i<liLength1.length;i++){
+				if(i==0){
+					firstLi = liLength1.eq(i).clone();
+				}else if(i==liLength1.length-1){
+					lastLi = liLength1.eq(i).clone();
+				}
+			}
+			$('#banner_adtext ul').prepend(lastLi);
+			$('#banner_adtext ul').append(firstLi);
+			
+			
+				
+			_i1 = new iScroll('banner_small',{hScrollbar:false,snap : true,
+			onScrollEnd: function () {
+				
+				var i = this.currPageX;
+				if(i == 0){
+					i=1;
+				}else if(i == 3){
+					i=0;
+				}else{
+					i-=1;
+				}
+				$(".dians .dian").removeClass("selected");
+				$(".dian[item-select="+i+"]").addClass("selected");
+				if(this.currPageX ==0){
+					_i1.scrollToPage(2,0,0);
+				}
+				else if(this.currPageX ==3){
+					_i1.scrollToPage(1,0,0);
+				}
+			}});
+			
+			
+			_i2 = new iScroll('banner_adtext',{vScrollbar:false,snap : true,
+			onScrollEnd: function () {
+				
+				if(this.currPageY ==0){
+					_i2.scrollToPage(0,2,0);
+				}
+				else if(this.currPageY ==3){
+					_i2.scrollToPage(0,1,0);
+				}
+			}});
+			//_i2.refresh();
+			_i1.scrollToPage(1,0,0);
+			_i2.scrollToPage(0,1,0);
+			setInterval(function(){
+				return;
+				_ci1++;
+				_ci2++;
+				
+				_i2.scrollToPage(0,_ci2,400);
+				
+				_i1.scrollToPage(_ci1,0,800);
+				
+				if(_ci1 == 3){
+					_ci1 = 1;
+				}
+				if(_ci2 == 3){
+					_ci2 = 1;
+				}
+			},3000);
+			*/
+			if(!$.cookie("cityname")){
+				new BMap.LocalCity().get(function(city){
+					setCity(city.name);
+					$("#location").text(getCityName());
+				});
+			}else{
+				$("#location").text(getCityName());
+			}
+			
+			if(isIos()){
+				//ios下载
+				document.querySelector('#c1_2_1').onclick = function(){
+					yumTrack('官方app下载','点击官方app下载');
+					track(channel,4334,'https://itunes.apple.com/cn/app/ken-de-ji/id587238847?mt=8');
+				};
+				document.querySelector('#c1_2_2').onclick = function(){
+					yumTrack('订餐app下载','点击订餐app下载');
+					track(channel,4462,' https://itunes.apple.com/cn/app/ken-ji-zhai-ji-song-guan-fang/id655012687?ls=1&mt=8');
+				};
+				document.querySelector('#c1_2_3').onclick = function(){
+					window.location.href = "http://order.kfc.com.cn/download/iphone.htm";
+				};
+				//a7_xx
+				document.querySelector('#a7_xx').onclick = function(){
+					yumTrack('焦点图','点击焦点图','https://itunes.apple.com/cn/app/ken-de-ji/id587238847?mt=8');
+				};
+				document.querySelector('#li7_xx_word').onclick = function(){
+					yumTrack('焦点图','点击焦点图','https://itunes.apple.com/cn/app/ken-de-ji/id587238847?mt=8');
+				};
+				//snow
+				/*document.querySelector('#snow').onclick = function(){
+					yumTrack('官方app下载','点击官方app下载');
+					track(channel,4334);
+					window.location.href = 'https://itunes.apple.com/cn/app/ken-de-ji/id587238847?mt=8';
+				};
+				document.querySelector('#snow1').onclick = function(){
+					yumTrack('官方app下载','点击官方app下载');
+					track(channel,4334);
+					window.location.href = 'https://itunes.apple.com/cn/app/ken-de-ji/id587238847?mt=8';
+				};*/
+			}else{
+				document.querySelector('#c1_2_1').onclick = function(){
+					yumTrack('官方app下载','点击官方app下载');
+					track(channel,4333,'http://m.kfc.com.cn/apk/official_KFC_APP_20141218.apk');
+					//track(channel,4333,'http://dd.myapp.com/16891/53B5985CEEE0812AF545F3AB8D34FF0D.apk?fsname=com%2Eyek%2Eandroid%2Ekfc%2Eactivitys%5F2%2E0%5F109.apk&asr=8eff');
+				};
+				document.querySelector('#c1_2_2').onclick = function(){
+					yumTrack('订餐app下载','点击订餐app下载');
+					//track(channel,4463,'http://download.app.4008823823.com.cn/kfcmos.apk');
+					// track(channel,4463,"http://m.4008823823.com.cn/kfcmwos/appdownload/androidapk.htm");
+					track(channel,4463,"http://dd.myapp.com/16891/53B5985CEEE0812AF545F3AB8D34FF0D.apk?fsname=com%2Eyek%2Eandroid%2Ekfc%2Eactivitys%5F2%2E0%5F109.apk&asr=8eff");
+				};
+				document.querySelector('#c1_2_3').onclick = function(){
+					//window.location.href = "http://order.kfc.com.cn/download/android.htm";
+					window.location.href = "http://dd.myapp.com/16891/53B5985CEEE0812AF545F3AB8D34FF0D.apk?fsname=com%2Eyek%2Eandroid%2Ekfc%2Eactivitys%5F2%2E0%5F109.apk&asr=8eff";
+				};
+				//li7_xx
+				document.querySelector('#a7_xx').onclick = function(){
+					// yumTrack('焦点图','点击焦点图','http://m.kfc.com.cn/apk/official_KFC_APP_20141130.apk');
+					yumTrack('焦点图','点击焦点图','http://m.kfc.com.cn/apk/official_KFC_APP_20141218.apk');
+				};
+				document.querySelector('#li7_xx_word').onclick = function(){
+					// yumTrack('焦点图','点击焦点图','http://m.kfc.com.cn/apk/official_KFC_APP_20141130.apk');
+					yumTrack('焦点图','点击焦点图','http://m.kfc.com.cn/apk/official_KFC_APP_20141218.apk');
+				};
+				//snow
+				/*document.querySelector('#snow').onclick = function(){
+					yumTrack('官方app下载','点击官方app下载');
+					track(channel,4333);
+					window.location.href = 'http://m.kfc.com.cn/apk/official_KFC_APP_20141218.apk';
+				};
+				document.querySelector('#snow1').onclick = function(){
+					yumTrack('官方app下载','点击官方app下载');
+					track(channel,4333);
+					window.location.href = 'http://m.kfc.com.cn/apk/official_KFC_APP_20141218.apk';
+				};*/
+			}
+			
+		});
+		function isIos() {
+			var u = navigator.userAgent.toLowerCase();
+		
+			if (u.indexOf('iphone') > -1 || u.indexOf('ipod') > -1 ) {
+				return true;
+			}
+			return false;
+		}
+	function weixin(){
+
+		if($('#c1_box').css("display") != 'none'){
+			$('#c1_box').hide();
+		}else{
+			$('#c1_box').show();
+			yumTrack('关注微信','点击关注微信');
+		}
+	}
+	/*轮播*/
+	/*//轮播图
+	AnimationObj.cursorImgs = [document.getElementById("cursorImgLink3"), document.getElementById("cursorImgLink1"), document.getElementById("cursorImgLink2")];
+	//轮播文字
+	AnimationObj.cursorTxts = [document.getElementById("cursorTextLink3"), document.getElementById("cursorTextLink1"), document.getElementById("cursorTextLink2")];
+	AnimationObj.cursorCurIdx = 2;*/
+	var AnimationObj = {};
+	AnimationObj.cursorImgs = [document.getElementById("img_x2"), document.getElementById("img_x3"), document.getElementById("img_x4"), document.getElementById("img_x5"), document.getElementById("img_x6")];
+	//轮播文字
+	AnimationObj.cursorTxts = [document.getElementById("li2"), document.getElementById("li3"), document.getElementById("li4"), document.getElementById("li5"),document.getElementById("li6"),document.getElementById("li7"),document.getElementById("li8"),document.getElementById("li9")];
+	AnimationObj.cursorCurIdx = 0;
+	AnimationObj.cursorImgsIntervalFunc = function(){
+		
+		//alert(1);
+		//切换动画
+		$(".li-image").eq(AnimationObj.cursorCurIdx).fadeIn(0).siblings(".li-image").fadeOut(250);
+		
+		//按索引轮播文字
+		$(".li-text").eq(AnimationObj.cursorCurIdx).fadeIn(0).siblings(".li-text").fadeOut(0);
+		
+		var nextIdx = (AnimationObj.cursorCurIdx + 1) % AnimationObj.cursorImgs.length;
+		AnimationObj.cursorCurIdx = nextIdx;
+	}
+	window.setInterval(AnimationObj.cursorImgsIntervalFunc, 6000);
+	
+	AnimationObj.cursorImgsIntervalFunc();
+	
+	
+	function resetImgHeight(){
+		var width = document.getElementById("a1").offsetWidth > 0 ? document.getElementById("a1").offsetWidth : document.getElementById("a2").offsetWidth;
+		document.getElementById("ul").style.height = width * (288/617) + "px";
+	}
+	window.onresize = function(){
+		resetImgHeight();
+	}
+	resetImgHeight();
+	/*(function(){
+		var txts = document.getElementsByClassName("adtext");
+		for(var i = 0; i < txts.length; i++){
+			if(txts[i].innerHTML.length > 24){
+				txts[i].timeSpan = txts[i].innerHTML.length / 24;
+				setInterval(function(){
+					txts[i].timeSpan = ;
+				}, 100);
+			}
+		}
+	})();*/
+	
+    </script>
+
+<!-- kfc1.2 by hezhanglin --><img src="./kfc_files/dcs.gif" style="display: none;"></body></html>

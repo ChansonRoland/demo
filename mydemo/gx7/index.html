@@ -1,0 +1,241 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GX7</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-1.8.1.min.js"></script>
+    <script src="js/iScroll v4.2.5.js"></script>
+</head>
+<body onload="resetPage()">
+<div class="frame">
+    <div class="header"></div>
+    <div class="conter">
+        <div id="roll">
+            <ul id="scroller">
+                <li><img src="images/roll_6.png" alt="###"></li>
+                <li><img src="images/roll_1.png" alt="###"></li>
+                <li><img src="images/roll_2.png" alt="###"></li>
+                <li><img src="images/roll_3.png" alt="###"></li>
+                <li><img src="images/roll_4.png" alt="###"></li>
+                <li><img src="images/roll_5.png" alt="###"></li>
+                <li><img src="images/roll_6.png" alt="###"></li>
+                <li><img src="images/roll_1.png" alt="###"></li>
+            </ul>
+        </div>
+        <div class="dian"></div>
+        <div class="quan"></div>
+        <ul id="introduce">
+            <li><img src="images/introduce_6.png" alt="###"></li>
+            <li><img src="images/introduce_1.png" alt="###" style="display:block;"></li>
+            <li><img src="images/introduce_2.png" alt="###"></li>
+            <li><img src="images/introduce_3.png" alt="###"></li>
+            <li><img src="images/introduce_4.png" alt="###"></li>
+            <li><img src="images/introduce_5.png" alt="###"></li>
+            <li><img src="images/introduce_6.png" alt="###"></li>
+            <li><img src="images/introduce_1.png" alt="###"></li>
+        </ul>
+        <div class="main">
+            <label for=""><input type="text" class="name" id="name1"></label>
+            <label for=""><input type="text" class="phone" id="phone"></label>
+            <select name="province" id="province" onchange="p_change();"></select>
+            <select name="city" id="city" onchange="c_change();"></select>
+            <select name="dealer" id="dealer"></select>
+            <div class="submit" onclick="s_submit();"></div>
+        </div>
+        <div class="text">温馨提示：我们会尽快与您取得联系。未经您的许可，您的资料不会透漏给任何第三方</div>
+       <div class="show">
+            <a href="###"></a>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="line">
+            <span class="line">吉利服务热线：</span><span>400-8886-9888</span>
+        </div>
+        <div class="label">Copyright 2014 GEELY</div>
+    </div>
+</div>
+<script type="text/javascript">
+/*图片轮播器*/
+var num = null;
+var introduce = document.getElementById('introduce');
+var img = introduce.getElementsByTagName('img');
+var quan = document.getElementsByClassName('quan')[0];
+var roll = document.getElementById('roll');
+var scroller = document.getElementById('scroller');
+var name1 = document.getElementById('name1');
+var phone = document.getElementById('phone');
+var province = document.getElementById('province');
+var city = document.getElementById('city');
+var dealer = document.getElementById('dealer');
+var num = 0;
+var myscroll = new iScroll("roll", {
+    hScrollbar: false, vScrollbar: false, snap: true,momentum:false, onScrollEnd: function () {
+        num = this.currPageX;
+        console.log(num);
+        if(num == 7){
+            myscroll.scrollToPage(1,0,0);
+        }
+        if(num == 0){
+            myscroll.scrollToPage(6,0,0);
+        }
+        for (var i = 0; i < img.length; i++) {
+             img[i].style.display = "none";
+         }
+         img[num].style.display = "block";
+         quan.style.left = (150 + 24 * num) + 'px';
+    }
+});
+myscroll.scrollToPage(1,0,0);
+setInterval(function(){
+    num ++;
+    myscroll.scrollToPage(num,0,500);
+},5000);
+/*屏幕自适应*/
+function resetPage() {
+    var deviceWidth = document.documentElement.clientWidth,
+    scale = deviceWidth / 320;
+    document.body.style.zoom = scale;
+}
+window.onresize = function () {
+    resetPage();
+}
+/*ajax请求*/
+var agentPrefix = "http://ama.adwo.com/advmessage/advthird/accessJsonP.action"
+var actualUrlPrefix = "http://lms.geely.com/glms/";
+function agentAjax(url, objData, sucFunc) {
+    var balarnd = Math.floor(Math.random() * 1000);
+    var agentUrl = agentPrefix + "?rnd=" + balarnd;
+    $.ajax({
+        type: "get",
+        url: agentUrl,
+        data: {
+            submitinfo: JSON.stringify({
+                "url": url,
+                "data": objData
+            }),
+            submittype: "post",
+            rettype: "json",
+            callback: "callback"
+        },
+        dataType: "jsonp",
+        success: sucFunc
+    });
+}
+function p_change() {
+    //document.write(url);
+    var url = actualUrlPrefix + "interface/Interfaces_getAreaMasterData.shtml?debug=1&type=1";
+    var objData = {};
+    var sucFunc = function (data) {
+        if ("object" == typeof (data)) {
+            // alert(JSON.stringify(data));
+            //console.log(data.body.data[0]);
+            for (var j = 0; j < data.body.data.length; j++) {
+                $("#province").append($("<option value='" + data.body.data[j].id + "'>" + data.body.data[j].name + "</option>"));
+            }
+        }
+    }
+    agentAjax(url, objData, sucFunc);
+    $("#city").html("...");
+    c_change();
+    $("#dealer").html("...");
+    d_change();
+}
+function c_change() {
+    var url = actualUrlPrefix + "interface/Interfaces_getAreaMasterData.shtml?debug=1&type=2";
+    var objData = {};
+    var sucFunc = function (data) {
+        // $("#city").html("");
+        if ("object" == typeof (data)) {
+            for (var j = 0; j < data.body.data.length; j++) {
+                if (parseInt($("#province").val()) == data.body.data[j].pid) {
+                    $("#city").append($("<option value='" + data.body.data[j].id + "'>" + data.body.data[j].name + "</option>"));
+                }
+            }
+        }
+    }
+    agentAjax(url, objData, sucFunc);
+    $("#dealer").html("...");
+    d_change();
+}
+function d_change() {
+    var url = actualUrlPrefix + "interface/Interfaces_getDealerData.shtml?debug=1";
+    var objData = {};
+    var sucFunc = function (data) {
+        $("#dealer").html("...");
+        if ("object" == typeof (data)) {
+            //console.log(data.body.data[0]);
+            for (var j = 0; j < data.body.data.length; j++) {
+                if (parseInt($("#province").val()) == data.body.data[j].provinceid && parseInt($("#city").val()) == data.body.data[j].cityid) {
+                    //console.log($(t).val());
+                    //console.log(data.body.data[j].id);
+                    $("#dealer").append($("<option value='" + data.body.data[j].dealerid + "'>" + data.body.data[j].dealername + "</option>"));
+                }
+            }
+        }
+    }
+    agentAjax(url, objData, sucFunc);
+}
+p_change();
+var patrn=/^(13[0-9]|14[0-9]|15[0-9]|18[0-9])\d{8}$$/ ;
+function s_submit() {
+    // var url = 'http://lms.geely.com/advmessage/adv/addResultJsonP.action?';
+    // var objData = {
+    // };
+    // var sucFunc = function (data) {
+    //     if ("object" == typeof (data)) {
+    //     console.log(data.message);
+    //    }
+    // }
+    // agentAjax(url,objData,sucFunc);
+    //  if(!(/^1[3|4|5|8][0-9]\d{4,8}$/.test(phone.value))){ 
+    //     alert("不是完整的11位手机号或者正确的手机号前七位"); 
+    // } 
+
+    if(name1.value == "" && patrn.test(phone.value)){
+        alert("请输入姓名");
+    }
+    if (name1.value != "" && !patrn.test(phone.value)){
+        alert("请输入正确的手机号");
+    }
+    if (name1.value == "" && !patrn.test(phone.value)){
+        alert("请输入姓名与手机号");
+    }
+    if(name1.value != "" && patrn.exec(phone.value)){
+        var url = 'http://track.mobile1.com.cn/advmessage/adv/addResultJsonP.action?advid=30058&mobile=' + phone.value + '&realname=' + name1.value + '&provinceid=' + province.value + '&cityid=' + city.value + '&dealerid=' + dealer.value;
+        $.ajax({
+            type: "get",
+            url: url,
+            dataType : 'jsonp',
+            success:function(data){
+                // alert(JSON.stringify(data));
+                if(data[0].success == 1){
+                    window.location.href = "success.html";
+                    name1.value = "";
+                    phone.value = "";
+                    province.value = "110000";
+                    city.value = "110100";
+                    dealer.value = "100804";
+                }
+                if(data[0].success == 2){
+                    alert(data[0].info);
+                }
+                if(data[0].success == 3){
+                    alert(data[0].info);
+                    phone.value = "";
+                }
+                if(data[0].success == 4){
+                    alert(data[0].info);
+                }
+            },
+            error:function(data){
+                alert("网络错误,请查看您的网络!");
+            }
+        });
+    }
+}
+</script>
+</body>
+</html>

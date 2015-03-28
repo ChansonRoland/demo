@@ -1,0 +1,174 @@
+*{
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	font-family: '微软雅黑';
+	list-style: none;
+}
+.frame{
+	width: 320px;
+	height: 560px;
+	padding-bottom: 30px;
+	background: #041424;
+	position: relative;
+}
+.top img{
+	width: 320px;
+	height: 260px;
+}
+.bj{
+	position: absolute;
+	top: 210px;
+	left: 20px;
+	width: 280px;
+	height: 360px;
+	background: #fff;
+	opacity: 0.1;
+}
+.main{
+	width: 260px;
+	padding: 10px;
+	min-height: 300px;
+	position: absolute;
+	left: 20px;
+	top: 210px;
+}
+.tab{
+	width: 260px;
+	height: 24px;
+	background: url(../images/tab1.png);
+	background-size: 260px 24px;
+}
+.main_order{
+	width: 245px;
+	height: 172px;
+	background: url(../images/dealer.png) no-repeat;
+	background-size: 245px 170px;
+	position: absolute;
+	top: 44px;
+	left: 20px;
+	/*display: none;*/
+}
+.main_order input{
+	border: none;
+	border-radius: 5px;
+}
+.name,.phone,.dealer{
+	position: absolute;
+	width: 155px;
+	height: 30px;
+	left: 86px;
+}
+.name{
+	top: 30px;
+}
+.phone{
+	top: 70px;
+}
+.province,.city,.dealer{
+	position: absolute;
+	border-radius: 5px;
+}
+.province{
+	width: 65px;
+	height: 28px;
+	left: 52px;
+	top: 110px;
+}
+.city{
+	width: 65px;
+	height: 28px;
+	left: 176px;
+	top: 110px;
+}
+.dealer{
+	top: 150px;
+}
+.sub{
+	display: inline-block;
+	width: 155px;
+	height: 35px;
+	background: #ff0000;
+	line-height: 35px;
+	text-align: center;
+	color: #fff;
+	font-weight: bolder;
+	font-size: 20px;
+	position: absolute;
+	left: 45px;
+	top: 200px;
+}
+.main_order p{
+	position: absolute;
+	top: 246px;
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+}
+.main_introduce{
+	display: none;
+	position: absolute;
+	top: 44px;
+	width: 260px;
+	height: 610px;
+	background: url(../images/introduce.png);
+	background-size: 260px 610px;
+}
+.main_enjoy{
+	position: absolute;
+	top: 44px;
+	width: 260px;
+	height: 350px;
+	background: url(../images/enjoy.png) no-repeat;
+	background-size: 131px 188px;
+	display: none;
+}
+#roll{
+	position: absolute;
+	top: 22px;
+	width: 260px;
+	height: 140px;
+	overflow: hidden;
+}
+#roll2{
+	position: absolute;
+	top: 194px;
+	width: 260px;
+	height: 140px;
+	overflow: hidden;
+}
+#scroller,#scroller2{
+	width: 1820px;
+	height: 140px;
+}
+#scroller img,#scroller2 img{
+	width: 260px;
+	height: 140px;
+	float: left;
+}
+.tab a{
+	display: inline-block;
+	width: 80px;
+	height: 30px;
+	margin-left: 3px;
+}
+.left1,.left2,.right1,.right2{
+	position: absolute;
+	z-index: 2;
+	width: 33px;
+	height: 40px;
+}
+.left1{
+	top: 70px;
+}
+.right1{
+	top: 70px;
+	right: 0;
+}
+.left2{
+	top: 250px;
+}
+.right2{
+	top: 250px;
+	right: 0;
+}

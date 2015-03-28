@@ -1,0 +1,157 @@
+/*样式重置*/
+*{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	font-family: "微软雅黑";
+}
+/*header样式*/
+.header{
+	width: 320px;
+	height: 49px;
+	background: url(../images/header.png);
+	background-size: 320px 49px; 
+}
+/*content样式*/
+.conter{
+	position: relative;
+}
+#roll{
+	width: 320px;
+	height: 222px;
+	overflow: hidden;
+}
+.dian{
+	position: absolute;
+	width: 131px;
+	height: 12px;
+	top: 200px;
+	right: 10px;
+	background:url(../images/dian.png);
+	background-size: 131px 12px;
+}
+.quan{
+	position: absolute;
+	top: 196px;
+	left: 174px;
+	z-index: 999;
+	width: 21px;
+	height: 21px;
+	background: url(../images/quan.png);
+	background-size: 21px 21px;
+}
+#scroller{
+	width: 2560px;
+	height: 222px;
+}
+#scroller img{
+	width: 320px;
+	height: 222px;
+	float: left;
+}
+#introduce{
+	width: 320px;
+	height: 124px;
+}
+#introduce img{
+	width: 320px;
+	height: 126px;
+	float: left;
+	display: none;
+}
+.main{
+	width: 320px;
+	height: 360px;
+	background: url(../images/main.png);
+	background-size: 320px 362px;
+	position: relative;
+}
+.main input,.main select{
+	position: absolute;
+	border: none;
+	background: #acacac;
+	width: 180px;
+	height: 32px;
+}
+.name{
+	top: 73px;
+	right: 20px;
+}
+.phone{
+	top: 124px;
+	right: 20px;
+}
+#province{
+	top: 180px;
+	right: 20px;
+}
+#city{
+	width: 100px;
+	right: 20px;
+	top: 230px;
+}
+#dealer{
+	right: 20px;
+	bottom: 52px;
+}
+.submit{
+	width: 130px;
+	height: 36px;
+	position: absolute;
+	bottom: 2px;
+	left: 96px;
+}
+.text{
+	width: 288px;
+	height: 45px;
+	padding: 10px 16px;
+	background: #e2e2e2;
+	font-size: 12px;
+	line-height: 20px;
+}
+.show{
+	width: 320px;
+	height: 228px;
+	background: url(../images/show.png);
+	background-size: 320px 228px;
+	position: relative;
+}
+.show a{
+	display: inline-block;
+	width: 90px;
+	height: 40px;
+	position: absolute;
+	right: 20px;
+	top: 94px;
+	-webkit-transform:rotate(-10deg);
+}
+/*footer样式*/
+.line{
+	width: 320px;
+	height: 28px;
+	background: #0067b2;
+	color: #ffffff;
+	font-size: 14px;
+}
+.label{
+	width: 320px;
+	height: 28px;
+	color: #575e5f;
+	font-size: 14px;
+
+}
+.footer div{
+	line-height: 28px;
+	text-align: center;
+}
+/*success样式*/
+.position{
+	position: absolute;
+	bottom: 0;
+}
+.success_content{
+	text-align: center;
+	margin: 200px 0;
+	font-size: 24px;
+	color: #464646;
+}

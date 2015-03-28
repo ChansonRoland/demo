@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>VIP 试驾活动</title>
+	<link rel="stylesheet" href="css/index.css">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+</head>
+<body onload="resetPage();">
+	<div class="header">
+		<p></p>
+		<hr>
+	</div>
+	<div class="content">
+		<ul>
+			<li class="content_title">您可以点击选择（多选）感兴趣的车型参与免费试驾</li>
+			<li>
+				<img class="img none" src="images/content_6.jpg" alt="">
+				<img class="off" src="images/on.png" alt="" title="dongfeng|20|10136|http://static.adwo.com/ad/201407/nissan-xc/index.html" >
+			</li>
+			<li>
+				<img class="img" src="images/content_1.jpg" alt="">
+				<img class="off" src="images/on.png" alt="" title="BMW3|20|10131|http://static.adwo.com/ad/201407/bmw_f3035/index.html" >
+			</li>
+			<li>
+				<img class="img" src="images/content_2.jpg" alt="">
+				<img class="off" src="images/on.png" alt="" title="BMW5|20|10132|http://ad.doubleclick.net/ddm/clk/281374312;108126932;y?http://static.adwo.com/ad/201404/bmw_xdrive/index.html" >
+			</li>
+			<li>
+				<img class="img" src="images/content_3.jpg" alt="">
+				<img class="off" src="images/on.png" alt="" title="BMWX5|20|10133|http://ad.doubleclick.net/ddm/clk/281374312;108126932;y?http://static.adwo.com/ad/201404/bmw_xdrive/index.html" >
+			</li>
+			<li>
+				<img class="img" src="images/content_4.jpg" alt="">
+				<img class="off" src="images/on.png" alt="" title="qienuoji|20|10134|http://click.gridsumdissector.com/track.ashx?gsadid=gad_7_71M9UIQ2&u=http%3a%2f%2fwww.jeep.com.cn%2fmobile%2fgrand_cherokee%2f" >
+			</li>
+			<li>
+				<img class="img" src="images/content_5.jpg" alt="">
+				<img class="off" src="images/on.png" alt="" title="jiakechong|20|10135|http://e.cn.miaozhen.com/r.gif?k=1013807&p=4-3N40&rt=2&ns=[M_ADIP]&ni=[M_IESID]&na=[M_MAC]&o=www.vwbeetle.cn/m/?utm_source=wannianli&utm_medium=cpm&utm_content=wannianli_informationflow_246&utm_campaign=beetle_2014q3" >
+			</li>
+			<li>
+				<img class="img none1" src="images/content_6.jpg" alt="">
+				<img class="off" src="images/on.png" alt="" title="dongfeng|20|10136|http://static.adwo.com/ad/201407/nissan-xc/index.html" >
+			</li>
+			<li>
+				<img class="img" src="images/content_7.jpg" alt="">
+				<img class="off" src="images/on.png" alt="" title="ziyouguang|20|10138|http://click.gridsumdissector.com/track.ashx?gsadid=gad_7_XD93LDGA&u=http%3a%2f%2fwww.jeep.com.cn%2fmobile%2fcherokee%2f" >
+			</li>
+			<li>
+				<img class="img" src="images/content_8.jpg" alt="">
+				<img class="off" src="images/on.png" alt=""  title="turui|20|10139|http://e.cn.miaozhen.com/r.gif?k=1013783&p=4-H3R0&rt=2&ns=[M_ADIP]&ni=[M_IESID]&na=[M_MAC]&o=http://www.touareg.cn/m/?utm_source=viva&utm_medium=cpm&utm_content=viva_focus_418&utm_campaign=touareg_2014q3" >
+			</li>
+			<li>
+				<img class="img" src="images/content_9.jpg" alt="">
+				<img class="off" src="images/on.png" alt="" title="A4L|20|10140|http://8di8oa.c.admaster.com.cn/c/a19735,b200423697,c3522,i0,m101,h" >
+			</li>
+			<li>
+				<img class="img" src="images/content_10.jpg" alt="">
+				<img class="off" src="images/on.png" alt="" title="A6L|20|10141|http://8di8oa.c.admaster.com.cn/c/a19735,b200423697,c3522,i0,m101,h" >
+			</li>
+			<li>
+				<img class="img" src="images/content_11.jpg" alt="">
+				<img class="off" src="images/on.png" alt="" title="Q5|20|10142|http://8di8oa.c.admaster.com.cn/c/a19735,b200423697,c3522,i0,m101,h" >
+			</li>
+		</ul>
+		<input class="submit" type="button">
+	</div>
+	<div class="footer">
+		<hr>
+	</div>
+	<!-- <a href="###" id="submit"><img class="submit" src="images/submit.png" alt="###"></a> -->
+</body>
+<script>
+/*屏幕自适应*/
+function resetPage() {
+    var deviceWidth = document.documentElement.clientWidth,
+    scale = deviceWidth / 320;
+    document.body.style.zoom = scale;
+}
+window.onresize = function () {
+    resetPage();
+}
+/*浮层切换*/
+$('.img').click(function(){
+	$(this).next().addClass("on");
+})
+$('.off').click(function(){
+	$(this).removeClass('on');
+});
+/*获取用户手机号*/
+function QueryString(){
+    var name,value,i;
+    var str=location.href;
+    var num=str.indexOf("?");
+    str=str.substr(num+1);
+    var arrtmp=str.split("&");
+    for(i=0;i < arrtmp.length;i++){
+        num=arrtmp[i].indexOf("=");
+        if(num>0){
+            name=arrtmp[i].substring(0,num);
+            value=arrtmp[i].substr(num+1);
+            this[name]=value;
+        }
+    }
+}
+var Request = new QueryString();
+var mobile = Request['mobile'];
+localStorage.setItem('mobile', mobile);
+var equipmentinfo = localStorage.getItem("equipmentinfo");
+/*用户在许昌或驻马店所做判断*/
+var source = Request['source'];
+localStorage.setItem('source', source);
+if(source == 1){
+	$('.none').css({display:"block",margin:"5px 0"});
+	$('.none1').css({display:"none"});
+}
+if(source == undefined){
+	source = "";
+}
+if(mobile == undefined){
+	mobile = "";
+}
+/*提交试驾*/
+var str = "";
+var submit = document.getElementsByClassName('submit');
+$('.submit').click(function(){
+	localStorage.removeItem('checked');
+	for(var i = 0;i < $('.on').length;i ++){
+		str += $('.on')[i].title + '@';
+	}
+	localStorage.setItem('checked', str);
+	var arr = str.split('@');
+	var desc = "";
+	for(var i = 0;i < arr.length - 1;i ++){
+		var arr2 = arr[i].split('|');
+		desc += arr2[0] + '@';
+	}
+	if(!$('.off').hasClass('on')){
+		alert('请选择您感兴趣的车型');
+	}else{
+		var url = 'http://ama.adwo.com/advmessage/adv/addResultJsonP.action?advid=30066&description=' + desc + '&mobile=' + mobile + '&expand1=' + source;
+		$.ajax({
+	        type: "get",
+	        url: url,
+	        dataType : 'jsonp',
+	        success:function(data){
+	            //alert(JSON.stringify(data));
+	            window.location = "success2.html";
+	        }
+	    });
+	}
+});
+/*首页PV监测*/
+var trackPath = "http://ama.adwo.com/tracknew/advTract/tractEventJsonP.action?";
+var trackScript;
+function track(cId, eventId, url) {
+    trackScript = null;
+    trackScript = document.createElement("script");
+    var src = trackPath + "cid=" + cId + "&eventid=" + eventId;
+    trackScript.type = "text/javascript";
+    trackScript.src = src;
+    document.getElementsByTagName("head")[0].appendChild(trackScript);
+    if (url != undefined && url != null && url != "") {
+        setTimeout(redirection, 500);
+        function redirection() {
+            location.href = url;
+        }
+    }
+}
+function eventcallback(result) {
+    if(typeof trackScript==='undefined')
+        return;
+    document.getElementsByTagName("head")[0].removeChild(trackScript);
+    trackScript=null;
+}
+track(20,10130);
+</script>
+</html>

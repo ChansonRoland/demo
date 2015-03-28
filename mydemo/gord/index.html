@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)http://pc.hezhanglin.com:33/h5/ad/ad_cars/changanfute/mdo/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0,  minimum-scale=1.0, maximum-scale=1.0">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<title></title>
+<link href="./index_files/index.css" type="text/css" rel="stylesheet">
+<script src="./index_files/channel.js"></script>
+<script src="./index_files/jquery-1.4.4.min.js"></script>
+<script src="./index_files/data.js"></script>
+<script src="./index_files/trackEvent.js"></script>
+<script src="./index_files/control.js"></script>
+<style>
+html,body{background-color:#fff;}
+</style>
+<script>
+
+$(document).ready(function(e) {
+	loadProData();
+	var ua = navigator.userAgent.toLowerCase();
+	
+	var isIOS = (ua.indexOf("iphone") > -1 || ua.indexOf("ipad") > -1);
+	if(isIOS){
+		$("#ss").attr("src","ad2.mp4");
+	}
+	track(channel,5992);
+});
+function playVideo() {
+	track(channel,5996);
+	document.getElementById('video_box').style.display = "block";
+	document.getElementById('video_player').play();
+	document.getElementById('video_player').webkitRequestFullScreen();
+	document.getElementById('video_player').requestFullscreen();
+}
+
+</script>
+
+</head>
+
+<body>
+<div class="fxbg">
+	<img class="img" src="./index_files/01.jpg" alt="">
+	<img class="img" src="./index_files/02.jpg" alt="">
+	<img class="img" src="./index_files/03.jpg" alt="">
+	<img class="img" src="./index_files/04.jpg" alt="">
+	<img class="img" src="./index_files/05.jpg" alt="">
+	<div class="btn1">
+		<input type="text" id="name" class="fly">
+		<input type="radio" id="sex1" name="sex" class="fly" checked="true" value="1">
+        <input type="radio" id="sex2" name="sex" class="fly" value="2">
+        <input type="tel" id="mobile" class="fly">
+        <input type="text" id="email" class="fly">
+		<select id="province" class="fly"><option data-name="选择省份" value="">请选择</option><option data-name="北京" value="北京">北京</option><option data-name="河北" value="河北">河北</option><option data-name="山东" value="山东">山东</option><option data-name="山西" value="山西">山西</option><option data-name="天津" value="天津">天津</option><option data-name="黑龙江" value="黑龙江">黑龙江</option><option data-name="吉林" value="吉林">吉林</option><option data-name="辽宁" value="辽宁">辽宁</option><option data-name="内蒙古" value="内蒙古">内蒙古</option><option data-name="安徽" value="安徽">安徽</option><option data-name="江苏" value="江苏">江苏</option><option data-name="上海" value="上海">上海</option><option data-name="浙江" value="浙江">浙江</option><option data-name="河南" value="河南">河南</option><option data-name="湖北" value="湖北">湖北</option><option data-name="湖南" value="湖南">湖南</option><option data-name="江西" value="江西">江西</option><option data-name="福建" value="福建">福建</option><option data-name="广东" value="广东">广东</option><option data-name="广西" value="广西">广西</option><option data-name="海南" value="海南">海南</option><option data-name="重庆" value="重庆">重庆</option><option data-name="云南" value="云南">云南</option><option data-name="新疆" value="新疆">新疆</option><option data-name="西藏" value="西藏">西藏</option><option data-name="四川" value="四川">四川</option><option data-name="陕西" value="陕西">陕西</option><option data-name="青海" value="青海">青海</option><option data-name="宁夏" value="宁夏">宁夏</option><option data-name="贵州" value="贵州">贵州</option><option data-name="甘肃" value="甘肃">甘肃</option></select>
+        <select id="citys" class="fly"><option value="">请选择</option></select>
+        <select id="dealername" class="fly"><option value="">请选择</option></select>
+        <select id="buytime" class="fly"><option value="">请选择</option><option>1个月内</option><option>3个月内</option><option>6个月内</option><option>12个月内</option></select>
+        
+     	<a href="javascript:track(channel,5993);submitForm();callButton1();callButton2();" id="submit" class="fly"></a>
+		
+		<a href="javascript:playVideo();" id="v1" class="fly"></a>
+		<a href="tel:4008877766" onclick="track(channel,5994);" id="v2" class="fly"></a>
+		<a href="javascript:track(channel,5992, 'http://www.newmondeo.ford.com.cn/');" id="v3" class="fly"></a>
+		
+		<div id="video_box" class="fly">
+			<video id="video_player" width="100%" height="100%" controls="" preload="true">
+				<source src="ad5.mp4" type="video/mp4">
+				<source src="ad2.mp4" type="video/mp4">
+				"对不起，您的浏览器不支持播放该视频，请升级版本以获得最佳观看体验，谢谢。"
+			</video>
+		</div>
+
+	</div>
+</div>
+<script type="text/javascript">
+var axel = Math.random() + "";
+var a = axel * 10000000000000;
+document.write('<img src="http://ad.doubleclick.net/activity;src=4084018;type=9-11v822;cat=PVPgu-;ord=' + a + '?" width="1" height="1" alt=""/>');
+var axel = Math.random() + "";
+var a = axel * 10000000000000;
+document.write('<img src="http://ad.doubleclick.net/activity;src=4084018;type=9-11v822;cat=UVmrV-;ord=1;num=' + a + '?" width="1" height="1" alt=""/>');
+
+function callButton1() {
+var tag_url=" http://ad.doubleclick.net/activity;src=4084018;type=9-11v822;cat=PVIae-;ord="+Math.floor(Math.random()*9999999999);
+if(document.getElementById("DCLK_FLDiv")){var flDiv=document.getElementById("DCLK_FLDiv");}
+else{var
+flDiv=document.body.appendChild(document.createElement("div"));flDiv.id="DCLK_FLDiv";flDiv.style.display="none";}
+var DCLK_FLIframe=document.createElement("iframe");
+DCLK_FLIframe.id="DCLK_FLIframe_"+Math.floor(Math.random()*9999999999);
+DCLK_FLIframe.src=tag_url;
+flDiv.appendChild(DCLK_FLIframe);
+}
+function callButton2() {
+var tag_url=" http://ad.doubleclick.net/activity;src=4084018;type=9-11v822;cat=UVcxR-;ord=1;num="+Math.floor(Math.random()*9999999999);
+if(document.getElementById("DCLK_FLDiv")){var flDiv=document.getElementById("DCLK_FLDiv");}
+else{var
+flDiv=document.body.appendChild(document.createElement("div"));flDiv.id="DCLK_FLDiv";flDiv.style.display="none";}
+var DCLK_FLIframe=document.createElement("iframe");
+DCLK_FLIframe.id="DCLK_FLIframe_"+Math.floor(Math.random()*9999999999);
+DCLK_FLIframe.src=tag_url;
+flDiv.appendChild(DCLK_FLIframe);
+}
+</script><img src="./index_files/activity" width="1" height="1" alt=""><img src="./index_files/activity(1)" width="1" height="1" alt="">
+<noscript>
+&lt;img src="http://ad.doubleclick.net/activity;src=4084018;type=9-11v822;cat=PVPgu-;ord=1?" width="1" height="1" alt=""/&gt;
+&lt;img src="http://ad.doubleclick.net/activity;src=4084018;type=9-11v822;cat=UVmrV-;ord=1;num=1?" width="1" height="1" alt=""/&gt;
+</noscript>
+<!-- DoubleClick Floodlight 代码结尾：请勿删除 -->
+
+
+</body></html>

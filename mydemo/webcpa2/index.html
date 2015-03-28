@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)http://pc.hezhanglin.com:33/h5/ad/ad_cars/webcpa2.0/regular/ -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    	<title>精彩试驾</title>
+        <link rel="stylesheet" type="text/css" href="./精彩试驾_files/reset.css">
+        <link rel="stylesheet" type="text/css" href="./精彩试驾_files/index.css">
+        <script src="./精彩试驾_files/jquery-1.4.4.min.js"></script>
+        <script src="./精彩试驾_files/trackEvent.js"></script>
+        <script src="./精彩试驾_files/dress.js"></script>
+        <script>
+		var cms_id = 511;
+			track(1, 5396);
+			//_track_adwo(cms_id);
+			$(function(){
+				if(location.href.indexOf("&invad") > -1 || location.href.indexOf("?invad") > -1){
+					location = "invad.html";	
+				}
+				$("checkbox").bind("click",function(){
+					if($(this).hasClass("selected")){
+						$(this).removeClass("selected");
+					}else{
+						$(this).addClass("selected");
+					}
+				});
+				$(".box a,.msg img").bind("click",function(){
+					$('.msg').fadeOut();
+				});
+				
+				loadProData();
+			});
+			
+        	function sendInfo(){
+				var name = $.trim($("#name").val()), reg_ch = /[^\u4e00-\u9fa5]/,reg_en = /^[a-zA-Z]+$/;
+				if (!name) {
+					alert("请输入您的姓名！");
+					return
+				} else if (reg_ch.test(name)&&!reg_en.test(name)) {
+					alert("请输入中文姓名或英文姓名！");
+					return
+				}
+				
+				var tel = $.trim($("#mobile").val()), reg = /^(13[0-9]|14[0-9]|15[0-9]|18[0-9])\d{8}$$/;
+				if (!tel || !reg.test(tel)) {
+					alert("请输入正确的手机号码！");
+					return
+				}
+				
+				var province = $("#province").val();
+				if(province == ""){
+					alert("请选择您所在的省份！");
+					return
+				}
+				var citys = $("#citys").val();
+				if(citys == ""){
+					alert("请选择您所在的城市！");
+					return
+				}
+				
+				
+				var cartypes = $("#cartype checkbox.selected");
+				if(cartypes.length == 0){
+					alert("请至少选择一种车型！");
+					return
+				}
+				var cartype = "";
+				for(var i=0;i<cartypes.length;i++){
+					cartype += cartypes[i].innerText + "|";	
+				}
+				cartype = cartype.substr(0,cartype.length-1);
+				
+				var carprices = $("#carprice checkbox.selected");
+				if(carprices.length == 0){
+					alert("请至少选择一个价格区间！");
+					return
+				}
+				var carprice = "";
+				for(var i=0;i<carprices.length;i++){
+					carprice += carprices[i].innerText + "|";	
+				}
+				carprice = carprice.substr(0,carprice.length-1);
+				
+				
+				var brand = $("#brand").val();
+				if(brand.length == 0){
+					alert("请选择您中意的品牌！");
+					return
+				}
+				
+				
+				var data = {
+						realname: name,
+						mobile: tel,
+						provincename:province,
+            			cityname:citys,
+						expand1:cartype,
+						expand2:carprice,
+						expand3:brand,
+						cmsp:request("cmsp")
+					}
+					
+				showSubMod();
+				
+				var url = "http://track.mobile1.com.cn/advmessage/adv/addResultJsonP.action?advid=" + cms_id;
+				$.ajax({
+					url: url,
+					cache: false,
+					dataType : 'jsonp',
+					jsonpCallback: "eventcallback2",
+					data: data,
+					success: function(json) {
+						hideSubMod();
+						
+						if (json[0].success == 1) {
+							$('.msg').fadeIn();
+							document.getElementsByTagName('form')[0].reset();
+							$("checkbox").removeClass("selected");
+						}
+						else{
+							alert('手机号重复或者提交失败');
+						}
+					}
+				});
+			}
+			
+			function showSubMod(){
+				$('.subload').fadeIn();
+			}
+			
+			function hideSubMod(){
+				$('.subload').fadeOut();
+			}
+	function request(paras)
+    { 
+        var url = location.href; 
+        var paraString = url.substring(url.indexOf("?")+1,url.length).split("&"); 
+        var paraObj = {} 
+        for (i=0; j=paraString[i]; i++){ 
+        paraObj[j.substring(0,j.indexOf("=")).toLowerCase()] = j.substring(j.indexOf("=")+1,j.length); 
+        } 
+        var returnValue = paraObj[paras.toLowerCase()]; 
+        if(typeof(returnValue)=="undefined"){ 
+        return ""; 
+        }else{ 
+        return returnValue; 
+        } 
+    }
+	function _track_adwo(adid){
+		$.get("http://offer.adwo.com/iofferwallcharge/wc?pid="+request("pid")+"&adid="+adid);
+	}
+			function loadProData() {
+				var proOption = "<option value=''>省</option>";
+				for (var i in p) {
+					proOption += "<option id="+i+" value='" + p[i] + "'>" + p[i] + "</option>";
+				}
+				$("#province").empty().append(proOption).bind('change', function() {
+					if (!$(this).val()) {
+						return
+					}
+					loadCityData($(this).find('option:selected').attr('id'));
+				});
+			}
+			
+			function loadCityData(pro) {
+				var cityOption = "<option value=''>市</option>";
+				for (var j in c) {
+					if (c[j]["parent"] == pro) {
+						cityOption += "<option value='" + c[j]["name"] + "'>" + c[j]["name"] + "</option>";
+					}
+				}
+				$("#citys").empty().append(cityOption);
+			}
+        </script>
+    </head>
+    
+    <body class="index">
+    
+    	<div class="container">
+        	
+            <figure>
+            	<img src="./精彩试驾_files/banner.jpg" alt="">
+            </figure>
+            
+            <section id="register">
+            	<h3>完成以下专属测试，<br>我们将为独具一格的您挑选最合适的试驾车型</h3>
+                <form>
+                	<p>
+                    	<label class="title">姓　名</label>
+						<input id="name" type="text" placeholder="">
+                    </p> 
+                    
+                    <p>
+                    	<label class="title">手机号</label>
+						<input id="mobile" type="tel" placeholder="">
+                    </p>
+                    
+                    <p>
+                    	<label class="title">所在地</label>
+						<select id="province"><option value="">省</option><option id="1" value="北京市">北京市</option><option id="2" value="江西省">江西省</option><option id="3" value="河北省">河北省</option><option id="4" value="陕西省">陕西省</option><option id="5" value="贵州省">贵州省</option><option id="6" value="黑龙江省">黑龙江省</option><option id="7" value="浙江省">浙江省</option><option id="8" value="云南省">云南省</option><option id="9" value="四川省">四川省</option><option id="10" value="河南省">河南省</option><option id="11" value="山东省">山东省</option><option id="12" value="广西壮族自治区">广西壮族自治区</option><option id="13" value="内蒙古自治区">内蒙古自治区</option><option id="14" value="广东省">广东省</option><option id="15" value="海南省">海南省</option><option id="16" value="青海省">青海省</option><option id="17" value="江苏省">江苏省</option><option id="18" value="湖北省">湖北省</option><option id="19" value="上海市">上海市</option><option id="20" value="宁夏回族自治区">宁夏回族自治区</option><option id="21" value="重庆市">重庆市</option><option id="22" value="甘肃省">甘肃省</option><option id="23" value="福建省">福建省</option><option id="24" value="辽宁省">辽宁省</option><option id="25" value="山西省">山西省</option><option id="26" value="吉林省">吉林省</option><option id="27" value="天津市">天津市</option><option id="28" value="湖南省">湖南省</option><option id="29" value="安徽省">安徽省</option><option id="30" value="新疆维吾尔自治区">新疆维吾尔自治区</option><option id="31" value="台湾省">台湾省</option><option id="32" value="香港特别行政区">香港特别行政区</option><option id="33" value="澳门特别行政区">澳门特别行政区</option><option id="34" value="西藏自治区">西藏自治区</option></select>
+                        <select id="citys"><option value="">城市</option></select>
+                    </p>
+                    
+                    <p>
+                    	<label class="title" style="vertical-align:top;">车　型</label>
+                        <span class="checkboxlist" id="cartype">
+                        	<checkbox>紧凑型车</checkbox>
+                            <checkbox>中型车</checkbox>
+                            <checkbox>SUV</checkbox>
+                            <checkbox>豪华车</checkbox>
+                            <checkbox>跑车</checkbox>
+                        </span>
+                    </p>
+                    
+                    <p>
+                    	<label class="title" style="vertical-align:top;">价　格</label>
+                        <span class="checkboxlist" id="carprice">
+                        	<checkbox>12万以下</checkbox>
+                            <checkbox>12-18万</checkbox>
+                            <checkbox>18-25万</checkbox>
+                            <checkbox>25-40万</checkbox>
+                            <checkbox>40万以上</checkbox>
+                        </span>
+                    </p>
+                    
+					<p>
+                    	<label class="title">品　牌</label>
+						<select id="brand">
+							<option value=""></option>
+							<option>奥迪</option>
+							<option>一汽大众</option>
+							<option>奔驰</option>
+							<option>福特</option>
+							<option>Jeep</option>
+							<option>双龙</option>
+						</select>
+                    </p>
+					
+                    <div class="butt">
+                    	<a href="javascript:sendInfo();">提交</a>
+                    </div>
+                </form>
+                
+            </section>
+           
+            
+            <div class="subload" style="display:none;">
+            	<h2>数据提交中，请稍后...</h2>
+            </div>
+            
+            <div class="msg" style="display:none;">
+            	<div class="box">
+                	<h3>感谢您的申请</h3>
+                    <p>我们会根据您的选择偏好，为您推荐最适合的车型，后续将会联系您以确认试驾事宜。</p>
+                    <a>确 认</a>
+                </div>
+                <img src="./精彩试驾_files/close.png">
+            </div>
+            
+        </div>
+	
+    
+
+
+</body></html>

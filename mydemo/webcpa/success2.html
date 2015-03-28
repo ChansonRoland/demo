@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>VIP试驾提交成功</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body onload="resetPage();">
+	<div class="s_header">
+		<a href="" id="a"><img src="images/back.png" alt=""></a><br>
+		<hr>
+	</div>
+	<div class="s_content">
+		<!-- <img src="images/success.jpg" alt=""> -->
+    <strong>试驾指南</strong><br/>
+    <span>VIP GUIDE</span>
+    <hr>
+    <div class="s_content_submit">恭喜，您的试驾意向已经提交成功!</div>
+    <hr>
+    <p>您选择的品牌活动如下，我们将在十个工作日内安排客服人员与您联系</p>
+	</div>
+	<div class="s_footer" id="s_footer"></div>
+</body>
+<script>
+var trackPath = "http://ama.adwo.com/tracknew/advTract/tractEventJsonP.action?";
+var trackScript;
+var equipmentinfo = localStorage.getItem("mobile");
+localStorage.setItem('equipmentinfo', equipmentinfo);
+function track(cId, eventId, url) {
+    trackScript = null;
+    trackScript = document.createElement("script");
+    var src = trackPath + "cid=" + cId + "&eventid=" + eventId + "&equipmentinfo=" + equipmentinfo;
+    trackScript.type = "text/javascript";
+    trackScript.src = src;
+    document.getElementsByTagName("head")[0].appendChild(trackScript);
+    if (url != undefined && url != null && url != "") {
+        setTimeout(redirection, 500);
+        function redirection() {
+            window.open(url); 
+        }
+    }
+}
+function eventcallback(result) {
+    if(typeof trackScript==='undefined')
+        return;
+    document.getElementsByTagName("head")[0].removeChild(trackScript);
+    trackScript=null;
+
+}
+/*屏幕自适应*/
+function resetPage() {
+    var deviceWidth = document.documentElement.clientWidth,
+    scale = deviceWidth / 320;
+    document.body.style.zoom = scale;
+}
+window.onresize = function () {
+    resetPage();
+}
+/*list遍历*/
+var arr = localStorage.getItem("checked");
+var arr2 = arr.split('@');
+for(var i = 0;i < arr2.length - 1;i ++){
+  	var arr3 = arr2[i].split('|');
+  	var text = "";
+  	if(arr3[0] == "BMW3"){
+  		arr3[0] = "BMW 3系2014款";
+  	}else if(arr3[0] == "BMW5"){
+  		arr3[0] = "BMW 5系2014款";
+  	}else if(arr3[0] == "BMWX5"){
+  		arr3[0] = "BMW X5 2014款";
+  	}else if(arr3[0] == "qienuoji"){
+  		arr3[0] = "Jeep 大切诺基";
+  	}else if(arr3[0] == "jiakechong"){
+  		arr3[0] = "大众甲壳虫2014款";
+  	}else if(arr3[0] == "dongfeng"){
+  		arr3[0] = "东风日产轩逸";
+  	}else if(arr3[0] == "ziyouguang"){
+  		arr3[0] = "Jeep 自由光";
+  	}else if(arr3[0] == "turui"){
+  		arr3[0] = "大众途锐四驱";
+  	}else if(arr3[0] == "A4L"){
+  		arr3[0] = "奥迪A4L 2015款";
+  	}else if(arr3[0] == "A6L"){
+  		arr3[0] = "奥迪A6L 2014款";
+  	}else if(arr3[0] == "Q5"){
+  		arr3[0] = "奥迪Q5 2013款";
+  	}
+  	var url = "<a target='_blank' href='"+arr3[3]+ "' onclick=\"track(" + arr3[1] + "," + arr3[2] + ")\">";
+  	url += "【尊贵试驾】" + arr3[0] + "&gt;&gt;";
+  	url += "</a>";
+  	var p = document.createElement('p');
+  	p.innerHTML = url;
+    p.id = "p";
+  	s_footer.appendChild(p);
+}
+var a = document.getElementById('a');
+var source = localStorage.getItem('source');
+a.onclick = function(){
+    if(source == "undefined" || source == ""){
+        a.href = "index.html?mobile=" + equipmentinfo;
+    }else{
+        a.href = "index.html?mobile=" + equipmentinfo + "&source=" + source;
+    }
+}
+</script>
+</html>
