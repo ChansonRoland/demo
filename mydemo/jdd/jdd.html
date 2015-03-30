@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)http://pc.hezhanglin.com:33/h5/ad/questionnaire/jdd/q1.html -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <meta content="True" name="HandheldFriendly">
+	<title>调查问卷</title>
+    <link rel="stylesheet" type="text/css" href="./jdd_files/reset.css">
+    <link rel="stylesheet" type="text/css" href="./jdd_files/phone.css">
+    <script src="./jdd_files/jquery-1.4.4.min.js"></script>
+    <script src="./jdd_files/jquery.cookie.js"></script>
+    <script src="./jdd_files/control.js"></script>
+    <script type="text/javascript">
+    var data = {advid:30017,qnnaireid:6,commitinfo:''};
+	$(document).ready(function(e) {
+        $("radio").bind("click",function(){
+			var $this = $(this);
+			$("radio[name="+$this.attr("name")+"]").removeClass("selected");
+			$this.addClass("selected");
+		});
+		$(".submit").click(function(){
+			var q1 = $("radio[name=q1].selected");
+			var q2 = $("radio[name=q2].selected");
+			var q3 = $("radio[name=q3].selected");
+			var q4 = $("radio[name=q3].selected");
+			
+			if(q1.length == 0){
+				alert("请选择问题1的答案");
+				return;
+			}
+			if(q2.length == 0){
+				alert("请选择问题2的答案");
+				return;
+			}
+			if(q3.length == 0){
+				alert("请选择问题3的答案");
+				return;
+			}
+            if(q4.length == 0){
+				alert("请选择问题4的答案");
+				return;
+			}
+			
+			data.commitinfo = "20:" + q1.attr("optionid");
+			data.commitinfo += "|21:" + q2.attr("optionid");
+			data.commitinfo += "|22:" + q3.attr("optionid");
+			data.commitinfo += "|23:" + q4.attr("optionid");
+			
+			submitData(data,function(res){
+				if(res.success == 1){
+					alert('提交成功');
+				}
+			});
+		});
+    });
+    </script>
+
+</head>
+<body>
+	<div class="body">
+        <div class="header">
+            <figure style="font-size: 0;"><img src="./jdd_files/1.jpg"></figure>
+        </div>
+        <div class="container q">
+            <div class="num">1</div>
+            <div class="title">您是否需要“口袋fan”包月免流量服务？ </div>
+            <radio name="q1" class="option" optionid="101">需要</radio>
+            <radio name="q1" class="option selected" optionid="102">可以考虑</radio>
+            <radio name="q1" class="option" optionid="103">不需要</radio>
+        </div>
+        <div class="container q">
+            <div class="num">2</div>
+            <div class="title">“口袋fan”如果有包月免流量服务，您期望哪些内容可以免流量？</div>
+            <radio name="q2" class="option" optionid="104">图片文字</radio>
+            <radio name="q2" class="option" optionid="105">视频内容</radio>
+            <radio name="q2" class="option" optionid="106">全部包括</radio>
+        </div>
+        <div class="container q">
+            <div class="num">3</div>
+            <div class="title">如果“口袋fan”免流量服务包括图片、文字及视频，您期望的资费是多少？</div>
+            <radio name="q3" class="option" optionid="107">每月3元</radio>
+            <radio name="q3" class="option" optionid="108">每月5元</radio>
+            <radio name="q3" class="option" optionid="109">每月9元</radio>
+        </div>
+        <div class="container q">
+            <div class="num">4</div>
+            <div class="title">如果服务包括“沃音悦台”和“口袋fan”同时免流量，您期望的资费是多少？</div>
+            <radio name="q4" class="option" optionid="110">每月12元</radio>
+            <radio name="q4" class="option" optionid="111">每月15元</radio>
+            <radio name="q4" class="option" optionid="112">其他</radio>
+            
+            <hr>
+            <a class="submit">提交</a>
+        </div>
+    </div>
+
+
+</body></html>

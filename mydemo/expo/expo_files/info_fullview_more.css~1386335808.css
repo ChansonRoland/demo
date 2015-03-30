@@ -1,0 +1,63 @@
+@CHARSET "UTF-8";
+html { width:100%; height:100%;}
+body  { width:100%; margin:0 ; }
+.season,.season div,.season p,.season img { margin:0 ; padding:0; }
+.season { width:100%;height:100%; position:relative;overflow-y:hidden;}
+.season .seasonBg { width:100%;height:100%; position:relative; }
+.season .seasonBg img { width:100%;height:100%; }
+.season .seasonBg .txt { position:absolute; top:60%; left:0; height:100px; overflow:hidden;width:80%;background:rgba(0,0,0,0.4);font-size:24px;color:#fff; transition:all 0.5s; -webkit-transition:all 0.5s;-moz-transition:all 0.5s;}
+.season .seasonBg .txt.open { width:100%; height:100%; top:0; }
+.season .seasonBg .txt p { margin:0; padding:20px 14%; }
+.season .listwrap { width:100%; background-size:cover; height:auto; } 
+.season .listwrap .seasonlist { width:100%;position:relative; overflow:hidden; }
+.season .listwrap .seasonlist img { width:100%; }
+.season .listwrap .seasonlist .txt { position:absolute;height:100px; overflow:hidden;width:80%;background:rgba(0,0,0,0.4);font-size:24px;color:#fff; transition:all 0.5s; -webkit-transition:all 0.5s;-moz-transition:all 0.5s;}
+.season .listwrap .seasonlist .txt p { margin:0; padding:20px 14%; }
+.season .listwrap .seasonlist:nth-child(2n+1) .txt { top:70%; left:0; }
+.season .listwrap .seasonlist:nth-child(2n) .txt { top:25%; right:0; }
+.season .listwrap .seasonlist .txt.open { width:100%; height:100%; top:0; }
+.season .arrow { display:none;width:38px;height:37px;position:fixed;bottom:30px;left:-19px;margin-left:50%; z-index:99; }
+
+@media screen and (max-width: 800px) {
+	.season .seasonBg .txt { font-size:18px; }
+	.season .seasonBg .txt p { padding:16px 14%; }
+	.season .listwrap .seasonlist .txt { font-size:18px; }
+	.season .listwrap .seasonlist .txt p { padding:16px 14%; }
+}
+
+@media screen and (max-width: 700px) {
+	.season .seasonBg .txt { font-size:16px; }
+	.season .seasonBg .txt p { padding:16px 14%; }
+	.season .listwrap .seasonlist .txt { font-size:16px; }
+	.season .listwrap .seasonlist .txt p { padding:12px 12%; }
+}
+
+@media screen and (max-width: 600px) {
+	.season .seasonBg .txt { font-size:14px; }	
+	.season .seasonBg .txt p { padding:16px 14%; }
+	.season .listwrap .seasonlist .txt { font-size:14px; }
+	.season .listwrap .seasonlist .txt p { padding:8px 10%; }
+}
+
+/******电话*****/
+.list-tel{
+	 z-index: 999;
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-ms-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	transition: all 0.4s;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	display: none;
+}
+.list-tel.open{
+	display: block;
+}
+
+.list-tel img{
+	max-height: 100px;
+	width: 100%;
+}

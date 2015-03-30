@@ -1,0 +1,551 @@
+﻿<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,  minimum-scale=1.0, maximum-scale=1.0" />
+	<title>cat</title>
+    <link href="css/index.css" rel="stylesheet" />
+    <link href="css/index2.css" rel="stylesheet" />
+    <link href="css/reset.css" rel="stylesheet" />
+    <script src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/iScroll v4.2.5.js"></script>
+</head>
+<body onload="resetPage();">
+<div class="frame">
+    <div class="one onefix">
+        <a href="javascript:void(0)" class="one1" data-url="tel:4001115187" id="hotel"></a>
+    </div>
+    <div class="one">
+        <a href="javascript:void(0)" class="one1" data-url="tel:4001115187" id="hotel"></a>
+        <a href="javascript:void(0)" class="one2"></a>
+        <a href="http://npi336d2gc.mobileone.com.cn/" class="one3"></a>
+    </div>
+	<div class="two">
+		<a href="javascript:void(0)" class="two1"></a>
+		<a href="javascript:void(0)" class="two2"></a>
+		<a href="javascript:void(0)" class="two3"></a>
+		<a href="javascript:void(0)" class="two4"></a>
+	</div>
+	<div class="three">
+		<a href="javascript:void(0)" class="three1"></a>
+	</div>
+	<div class="four">
+		<a href="javascript:void(0)" class="four1"></a>
+	</div>
+	<div class="five">
+		<video id="Html5Video" width="640" height="360" preload controls poster="images/video.png">
+			<source src="video1.mp4" type='video/mp4'/>
+		</video>
+	</div>
+	<div class="six">
+		<a href="javascript:void(0)" class="six1"></a>
+		<a href="javascript:void(0)" class="six2"></a>
+		<a href="javascript:void(0)" class="six3"></a>
+	</div>
+</div>
+    <div class="cover"></div>
+    <div class="cover1"></div>
+    <div class="popupAlert loginForm">
+        <div class="close"></div>
+        <input id="loginMobile" type="tel" class="textbox fly" />
+        <div class="btnLogin fly" data-tap="login();"></div>
+        <div class="btnReg fly"></div>
+    </div>
+    <div class="popupAlert regForm">
+        <div class="close"></div>
+        <input id="regName" type="text" class="textbox fly" />
+        <input id="regMobile" type="tel" class="textbox fly" />
+        <div class="btnLogin fly"></div>
+        <div class="btnReg fly" data-tap="reg()"></div>
+    </div>
+    <div class="popupAlert weixinForm">
+        <div class="close"></div>
+    </div>
+    <div class="popupAlert xunjiaForm">
+        <div class="close"></div>
+        <input id="xunjiaName" type="text" class="textbox fly" />
+        <input id="xunjiaMobile" type="tel" class="textbox fly" />
+        <!-- <a class="xunjiaTel fly" href="tel:4001115187"></a> -->
+        <div class="btnXunjia fly" data-tap="xunjia()"></div>
+        <div class="btnDenglu fly"></div>
+    </div>
+    <div class="popupAlert xunjiaokForm">
+        <div class="close"></div>
+       <!--  <div class="btnJixu fly"></div>
+        <div class="btnWaJi fly"></div>
+        <div class="btnBangmang fly"></div> -->
+        <div class="close close2"></div>
+    </div>
+    <div class="popupAlert haibaoForm" data-url="http://catwaji.mobileone.com.cn/950gc/">
+        <div class="close1" data-tap="$('.cover1,.haibaoForm').hide();"></div>
+    </div>
+    <div class="bj" style="display:none;"></div>
+    <div class="fixFrame" style="display:none;">
+        <div class="oneH">
+            <button class="off"></button>
+        </div>
+        <div class="fixS" id="fixS">
+            <div class="fix">
+                <div id="roll">
+                    <ul id="scroller">
+                        <li>
+                            <strong>问：Cat 336D2 GC 做了哪些优化？</strong>
+                            <p>答：相比336D2，这款336D2 GC的大臂，动臂和铲斗都进行了优化，面对注重单位时间成本的用户，这款产品可以胜任多种工况。</p>
+                        </li>
+                        <li>
+                            <strong>问：Cat 336D2 GC 油耗怎么样？</strong>
+                            <p>答：336D2 GC 配备Cat C9发动机，整体的燃油系统经过优化，降低了对燃油质量的敏感度，更加适合国内的燃油状况。实验结果显示，相比其他同级别产品，336D2GC在拥有相同的生产力的同时，可以减少约13%的燃油消耗。</p>
+                        </li>
+                        <li>
+                            <strong>问：Cat 336D2 GC 适用的工况有哪些</strong>
+                            <p>答：出色的挖掘力使得这款产品面对普通的土方或者石头等硬活，都可以胜任。以及通过丰富的作业机具可实现破碎等其他功能。</p>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="di">
+                    <li style="background:black"></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <a href="###" id="asd"></a>
+            </div>
+        </div>
+    </div>
+    <div class="fix2Frame" style="display:none">
+       <div class="fix2H">
+           <a href="###" class="off2"></a>
+       </div>
+       <div class="fix2S" id="fix2S">
+            <div class="fix2"></div>
+       </div>
+    </div>
+    <script type="text/javascript">
+        var api_url = 'http://catsite.ogilvy.com.cn/CatWajiWebService.asmx?op=';
+        var api_url_news = 'http://www.catwaji.com/club/';
+        var StrToken = 'a889810174804b9b-93511cde053f4586';
+        var regsource = 'CG0064';
+
+        function api(url, data, success, error) {
+            showLoadding();
+            $.ajax("http://newcms.mobile1.com.cn/advmessage/advthird/accessJsonP.action",
+                   {
+                       dataType: 'jsonp',
+                       eventcallback: 'callback1',
+                       data: ({
+                           submitinfo: JSON.stringify({ url: url, data: data }),
+                           submittype: 'get',
+                           rettype: 'json',
+                           callback: 'callback1'
+                       }),
+                       success: function (res) {
+                           hideLoadding();
+                           success(res, data)
+                       }, error: function (err) {
+                           hideLoadding();
+                           error(err);
+                       }
+                   });
+        }
+        function showXunjiaOK() {
+            if ($('.xunjiaokForm').length == 0) {
+                var html = '<div class="popupAlert xunjiaokForm">' +
+                                '<div class="close"></div>' +
+                                '<div class="btnJixu fly"></div>' +
+                                '<div class="btnWaJi fly"></div>' +
+                                '<div class="btnBangmang fly"></div>' +
+                            '</div>';
+                $('body').append(html);
+                taps($(".xunjiaokForm .close"), function () {
+                    $(".cover,.popupAlert").hide();
+                    //dataLayer.push({ 'event': 'event', 'category': '全网', 'action': '浮层叉号', 'label': '询价成功浮层' });
+                });
+                taps($(".xunjiaokForm .btnJixu"), function () {
+                    $(".cover,.popupAlert").hide();
+                    //dataLayer.push({ 'event': 'event', 'category': '全网', 'action': '继续浏览本站', 'label': '询价成功浮层' });
+                });
+                taps($(".xunjiaokForm .btnWaJi"), function () {
+                    //dataLayer.push({ 'event': 'event', 'category': '全网', 'action': '查看挖机产品', 'label': '询价成功浮层' });
+                    location = 'index.html';
+                });
+                taps($(".xunjiaokForm .btnBangmang"), function () {
+                    //dataLayer.push({ 'event': 'event', 'category': '全网', 'action': '查看卡特帮帮忙', 'label': '询价成功浮层' });
+                    location = 'p_help.html';
+                });
+            }
+            $('.xunjiaokForm').show();
+            showCover();
+            window.scrollTo(0, 0);
+        }
+        function showLoadding() {
+            if ($('.coverLoadding').length == 0) {
+                $('body').append('<div class="coverLoadding"></div><div class="popupAlert loaddingForm"></div>');
+            }
+            document.getElementsByClassName('coverLoadding').item(0).style.display = "block";
+            document.getElementsByClassName('coverLoadding').item(0).style.height = (document.height ? document.height : document.documentElement.clientHeight) * 2 + "px";
+            $('.coverLoadding,.loaddingForm').show();
+        }
+        function matchMobile(val) {
+            var valnew = trim(val);
+            if (valnew.match(/^(13[0-9]|14[0-9]|15[0-9]|18[0-9])\d{8}$/)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        function alertMsg(msg) {
+            alert(msg);
+        }
+        function trim(str) { //删除左右两端的空格
+            return str.replace(/(^\s*)|(\s*$)/g, "");
+        }
+        function ltrim(str) { //删除左边的空格
+            return str.replace(/(^\s*)/g, "");
+        }
+        function rtrim(str) { //删除右边的空格
+            return str.replace(/(\s*$)/g, "");
+        }
+        function matchUserName(val) {
+            var valnew = trim(val);
+            var re1 = /^[~!@#$%^&*()-+={}|;:<>?.,~！@#￥……&*（）+=｛｝【】|、：；"'《》、？，。]/i;
+            if (valnew == "") {
+                return false;
+            }
+            if (re1.test(valnew)) {
+                return false;
+            }
+            if (valnew.length < 2 || valnew.length > 20) {
+                return false;
+            }
+        }
+        function matchEmail(val) {
+            var valnew = trim(val);
+            if (valnew.match(/^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        function getUser() {
+            if (localStorage.getItem('userid')) {
+                return { userid: localStorage.getItem('userid'), name: localStorage.getItem('name'), mobile: localStorage.getItem('mobile'), isvip: localStorage.getItem('isvip'), userarea: localStorage.getItem('userarea'), usertype: localStorage.getItem('usertype') };
+            }
+            return false;
+        }
+        function showCover() {
+            document.getElementsByClassName('cover').item(0).style.display = "block";
+            document.getElementsByClassName('cover').item(0).style.height = (document.height ? document.height : document.documentElement.clientHeight) * 2 + "px";
+        }
+        function showLoadding() {
+            if ($('.coverLoadding').length == 0) {
+                $('body').append('<div class="coverLoadding"></div><div class="popupAlert loaddingForm"></div>');
+            }
+            document.getElementsByClassName('coverLoadding').item(0).style.display = "block";
+            document.getElementsByClassName('coverLoadding').item(0).style.height = (document.height ? document.height : document.documentElement.clientHeight) * 2 + "px";
+            $('.coverLoadding,.loaddingForm').show();
+        }
+        function hideLoadding() {
+            $('.coverLoadding,.loaddingForm').hide();
+        }
+        function showXunjia2() {
+            var user = getUser();
+            //alert(user);
+            if (!user) {
+                $('.xunjiaForm').show();
+                showCover();
+                //window.scrollTo(0,0);
+            } else {
+                showLoadding();
+                var sUserAgent = navigator.userAgent.toLowerCase();
+                // alert(sUserAgent.indexOf("ucbrowser") > 0);
+                if (sUserAgent.indexOf("ucbrowser") > 0) {
+                    hideLoadding();
+                    $(".cover,.popupAlert").hide();
+                    showXunjiaOK();
+                    //dataLayer.push({ 'event': 'event', 'category': '全网', 'action': '浮层询价成功', 'label': '注册询价浮层' });
+                } else {
+                    $.ajax('http://test.zhangkuo.net/advmessage/adv/addResultJsonP.action?advid=20057&expand2=enquire', {
+                        type: "post",
+                        dataType: 'jsonp',
+                        eventcallback: 'callback3',
+                        data: { mobile: user.mobile, uid: user.userid, realname: user.name, sex: '', provinceid: '', cityid: '' },
+                        success: function (res) {
+                            if (res[0].success == 1) {
+                                hideLoadding();
+                                $(".cover,.popupAlert").hide();
+                                showXunjiaOK();
+                                //dataLayer.push({ 'event': 'event', 'category': '全网', 'action': '浮层询价成功', 'label': '注册询价浮层' });
+                            }
+                        }
+                    });
+                }
+            }
+        }
+        function taps(els, func, className) {
+            for (var i = 0; i < els.length; i++) {
+                tap(els[i], func, className);
+            }
+        }
+        var tap_id, tap_move = false;
+        function tap(el, func, className) {
+            if (!el) return;
+            function tap_start() {
+                tap_move = false;
+                tap_id = el.id;
+                if (className && !el.classList.contains(className)) {
+                    el.classList.add(className);
+                }
+            }
+            function tap_move() {
+                tap_move = true;
+                if (className && el.classList.contains(className)) {
+                    el.classList.remove(className);
+                }
+            }
+            function tap_end() {
+                if (className && el.classList.contains(className)) {
+                    el.classList.remove(className);
+                }
+                if (tap_id == el.id && !tap_move) {
+                    if (func) {
+                        func(el);
+                    }
+                    event.preventDefault();
+                    event.stopPropagation();
+                    return false;
+                }
+                return false;
+            }
+            el.addEventListener("touchstart", tap_start);
+            el.addEventListener("touchmove", tap_move);
+            el.addEventListener("touchend", tap_end);
+        }
+        function showProduct() {
+            var user = getUser();
+            if (!user) {
+                $(".cover,.loginForm").show();
+                showCover();
+                return;
+            } else {
+                window.location.href = "http://catwaji.mobileone.com.cn/pro3_11.html?mobile=" + localStorage.getItem('mobile');
+            }
+        }
+        function showProduct2() {
+            var user = getUser();
+            if (!user) {
+                $(".cover,.loginForm").show();
+                showCover();
+                return;
+            } else {
+                window.location.href = "http://catwaji.mobileone.com.cn/p_problem2.html?mobile=" + localStorage.getItem('mobile');
+            }
+        }
+        function xunjia() {
+            //dataLayer.push({ 'event': 'event', 'category': '全网', 'action': '浮层提交', 'label': '注册询价浮层' });
+            var user = getUser();
+            /*
+            if(!user){
+                $(".cover,.loginForm").show();
+                closeMenu();
+                showCover();
+                return;
+            }
+            */
+            var realname = $('#xunjiaName').val();
+            var mobile = $('#xunjiaMobile').val();
+            var sex = '';//$('[name=xunjiaSex]:checked').val();
+            var prov = '';//$('#xunjiaProv').val();
+            var city = '';//$('#xunjiaCity').val();
+            if (realname == "") {
+                alertMsg('请输入您的姓名');
+                return;
+            }
+            if (!matchMobile(mobile)) {
+                alertMsg('请输入正确的手机号');
+                return;
+            }
+            var para = { id: '0', mobileno: mobile, usertype: 0, username: encodeURIComponent(realname), userarea: '北京|北京', regsource: regsource, mediasource: (localStorage.getItem('mediasource') ? localStorage.getItem('mediasource') : '') };
+            para.userarea = encodeURIComponent(para.userarea);
+            para.usertype = encodeURIComponent(para.usertype);
+            para.openid = para.mobileno;
+            $.ajax('http://newcms.mobile1.com.cn/advmessage/adv/addResultJsonP.action?advid=20057&expand1=336D2GC&expand2=regist', {
+                type: "post",
+                dataType: 'jsonp',
+                eventcallback: 'callback3',
+                data: {
+                    mobile: mobile,
+                    realname: encodeURIComponent(realname),
+                    expand3: regsource,
+                    description: (localStorage.getItem('mediasource') ? localStorage.getItem('mediasource') : '')
+                },
+                success: function (res) {
+                    if (res[0].success == 1) {
+                        if (res[0].ServiceReturn.flag) {
+                            userName = realname;
+                            localStorage.setItem('userid', res[0].ServiceReturn.userid);
+                            localStorage.setItem('isvip', 0);
+                            localStorage.setItem('name', realname);
+                            localStorage.setItem('mobile', mobile);
+
+                            $("#username").text(realname);
+                            $("#title_login").hide();
+                            $("#loginD1,.menuLogoutForm").show();
+                            $(".cover,.cover1,.popupAlert,.menuLoginForm").hide();
+                            $.ajax('http://newcms.mobile1.com.cn/advmessage/adv/addResultJsonP.action?advid=20057&expand1=336D2GC&expand2=enquire', {
+                                type: "post", dataType: 'jsonp',
+                                eventcallback: 'callback3',
+                                data: { mobile: mobile, uid: res[0].ServiceReturn.userid, realname: encodeURIComponent(realname), expand3: regsource, sex: sex, provinceid: prov, cityid: city, description: (localStorage.getItem('mediasource') ? localStorage.getItem('mediasource') : '') },
+                                success: function (res) {
+                                    if (res[0].success == 1) {
+                                        if (res[0].ServiceReturn.flag) {
+                                            $(".cover,.popupAlert").hide();
+                                            //alertMsg('询价成功');
+                                            showXunjiaOK();
+                                            //dataLayer.push({ 'event': 'event', 'category': '全网', 'action': '浮层询价成功', 'label': '注册询价浮层' });
+                                        } else {
+                                            $(".cover,.popupAlert").hide();
+                                            showXunjiaOK();
+                                            //dataLayer.push({ 'event': 'event', 'category': '全网', 'action': '浮层询价成功', 'label': '注册询价浮层' });
+                                            //alertMsg('提交失败');
+                                            //alertMsg(res[0].ServiceReturn.errmessage);
+                                        }
+                                    }
+                                }
+                            });
+                        } else {
+                            alertMsg(res[0].ServiceReturn.errmessage);
+                        }
+                    }
+                }
+            });
+        }
+        function showLogin() {
+            $(".popupAlert").hide();
+            $('.loginForm').show();
+            showCover();
+            window.scrollTo(0, 0);
+            //dataLayer.push({ 'event': 'page', 'category': '全网', 'action': '登录浮层', 'label': '登录浮层' });
+        }
+        function showReg() {
+            $(".cover,.popupAlert").hide();
+            $(".cover,.regForm").show();
+            // closeMenu();
+            showCover();
+            //dataLayer.push({ 'event': 'page', 'category': '全网', 'action': '注册询价浮层', 'label': '注册询价浮层' });
+        }
+        function login(refresh, source) {
+            //dataLayer.push({ 'event': 'event', 'category': '全网', 'action': '浮层登录', 'label': '登录浮层' });
+            var mobile;
+            //如果来源于外部
+            if (source) {
+                mobile = localStorage.getItem("t_mobile");
+            }
+            else {
+                mobile = $('#loginMobile').val();
+                if (!matchMobile(mobile)) {
+                    alertMsg('请输入正确的手机号');
+                    return;
+                }
+            }
+            api(api_url_news + 'api/users/', { id: '2', Mobileno: mobile },
+                function (res) {
+                    //处理服务器返回的值
+                    if (res.ErrorCode == 0) {
+                        userName = res.username;
+                        localStorage.setItem('usertype', res.usertype);
+                        localStorage.setItem('isvip', res.IsVip);
+                        localStorage.setItem('userid', res.uid);
+                        localStorage.setItem('userarea', res.userarea);
+                        localStorage.setItem('name', res.username);
+                        localStorage.setItem('mobile', mobile);
+                        $("#username").text(userName);
+                        $("#title_login").hide();
+                        $("#loginD1,.menuLogoutForm").show();
+                        $(".cover,.cover1,.popupAlert,.menuLoginForm").hide();
+                        //dataLayer.push({ 'event': 'event', 'category': '全网', 'action': '浮层登录成功', 'label': '登录浮层' });
+                        if (!refresh) {
+                            alertMsg('登录成功');
+                            location.reload();
+                        }
+                    } else {
+                        if (source) {
+                            //开始注册
+                            t_reg();
+                        } else {
+                            alertMsg('登录失败');
+                        }
+                    }
+                });
+            //track(channel, 10472);
+        }
+        $(function () {
+            var $showXJ = $(".one2,.six1");
+            $showXJ.bind("click", function () {
+                showXunjia2();
+            })
+            var $showPR = $(".three1,.four1");
+            $showPR.bind("click", function () {
+                showProduct();
+            })
+            var $showPR = $("#asd");
+            $showPR.bind("click", function () {
+                showProduct2();
+            }) 
+            taps($(".close"), function () {
+                $(".cover,.popupAlert").hide();
+            });
+            taps($("[data-tap]"), function (el) {
+                setTimeout(el.dataset.tap, 0);
+            });
+            taps($("[data-url]"), function (el) {
+                setTimeout(function () { location = el.dataset.url; }, 100);
+            });
+            taps($(".xunjiaForm .btnDenglu"), function (el) {
+                showLogin();
+            });
+            taps($(".loginForm .btnReg,.btoZhuce"), function (el) {
+                showReg();
+            });
+            taps($(".regForm .btnLogin"), function (el) {
+                showLogin();
+            });
+            $(".two a").each(function (index) {
+                $(this).bind("click", function () {
+                    var btn = $(this);
+                    var title = encodeURIComponent('#油效更有力，运营倍有利#Cat 336D2 GC液压挖掘机震撼登场！优化了省油模式，在同样及别的装车作业中，省油可达13%！详情请点击：landingpage336d2gc.mobileone.com.cn'), url, pic;
+                    switch (index) {
+                        case 0:
+                            var linkstr = "http://share.renren.com/share/buttonshare.do?";
+                            if (url) linkstr += "link=" + url + "&";
+                            if (title) linkstr += "title=" + title + "&";
+                            if (pic) linkstr += "pic=" + pic + "&";
+                            window.location.href = linkstr;
+                            break;
+                        case 1:
+                            var linkstr = "http://www.douban.com/recommend/?";
+                            if (title) linkstr += "title=" + title + "&";
+                            if (url) linkstr += "url=" + url + "&";
+                            if (pic) linkstr += "pic=" + pic;
+                            window.location.href = linkstr;
+                            break;
+                        case 2:
+                            var linkstr = "http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
+                            if (title) linkstr += "summary=" + title + "&";
+                            if (url) linkstr += "url=" + url + "&";
+                            if (pic) linkstr += "pics=" + pic;
+                            window.location.href = linkstr;
+                            break;
+                        case 3:
+                            var linkstr = "http://v.t.sina.com.cn/share/share.php?"
+                            if (title) linkstr += "title=" + title + "&";
+                            if (url) linkstr += "url=" + url + "&";
+                            if (pic) linkstr += "searchPic=false&pic=" + pic;
+                            window.location.href = linkstr;
+                            break;
+                    }
+                })
+            });
+        })
+    </script>
+</body>
+</html>

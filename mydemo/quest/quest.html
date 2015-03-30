@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<!-- saved from url=(0101)file:///D:/%E5%89%8D%E9%A1%B9%E7%9B%AE/CAT%E5%B8%AE%E5%B8%AE%E5%BF%99%E5%9B%9B%E6%9C%9F/2g/quest.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<title>注册页</title>
+    <link rel="stylesheet" href="file:///D:/%E5%89%8D%E9%A1%B9%E7%9B%AE/CAT%E5%B8%AE%E5%B8%AE%E5%BF%99%E5%9B%9B%E6%9C%9F/2g/css/common.css">
+	<!-- <link rel="stylesheet" href="css/p_2g06.css"> -->
+    <link rel="stylesheet" href="file:///D:/%E5%89%8D%E9%A1%B9%E7%9B%AE/CAT%E5%B8%AE%E5%B8%AE%E5%BF%99%E5%9B%9B%E6%9C%9F/2g/css/quest.css">
+	<script type="text/javascript" src="./quest_files/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="./quest_files/api.js"></script>
+</head>
+<body onload="resetPage()" style="zoom: 0.4875;">
+    <noscript>
+        &lt;iframe src="//www.googletagmanager.com/ns.html?id=GTM-52VC42"
+                height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;
+                &lt;script src="js/log.js"&gt;&lt;/script&gt;
+    </noscript>
+    <div class="frame">
+        <div class="header" style="position: relative;">
+            <a href="file:///D:/%E5%89%8D%E9%A1%B9%E7%9B%AE/CAT%E5%B8%AE%E5%B8%AE%E5%BF%99%E5%9B%9B%E6%9C%9F/2g/p_2g01.html" onclick="dataLayer.push({&#39;event&#39;:&#39;click&#39;,&#39;category&#39;:&#39;全网顶导&#39;,&#39;action&#39;:&#39;点击按钮&#39;,&#39;label&#39;:&#39;全网顶导_点击按钮_回到首页&#39;});" style="position:absolute;top:0;left:0;display:inline-block;width:300px;height:80px;"></a>
+            <div class="logo">
+                <div class="headermenu" style="width:330px;">
+                    <a href="tel:4001115187" onclick="dataLayer.push({&#39;event&#39;:&#39;click&#39;,&#39;category&#39;:&#39;全网顶导&#39;,&#39;action&#39;:&#39;点击按钮&#39;,&#39;label&#39;:&#39;全网顶导_点击按钮_查询热线&#39;});track(channel,10450);">查询热线</a>
+                    <div class="unlogin-status" style="display: none; width: 180px;">
+                        <a onclick="dataLayer.push({&#39;event&#39;:&#39;click&#39;,&#39;category&#39;:&#39;全网顶导&#39;,&#39;action&#39;:&#39;点击按钮&#39;,&#39;label&#39;:&#39;全网顶导_点击按钮_登录&#39;});" href="file:///D:/%E5%89%8D%E9%A1%B9%E7%9B%AE/CAT%E5%B8%AE%E5%B8%AE%E5%BF%99%E5%9B%9B%E6%9C%9F/2g/p_2g05.html">登录</a>
+                        <a href="file:///D:/%E5%89%8D%E9%A1%B9%E7%9B%AE/CAT%E5%B8%AE%E5%B8%AE%E5%BF%99%E5%9B%9B%E6%9C%9F/2g/p_2g06.html" onclick="dataLayer.push({&#39;event&#39;:&#39;click&#39;,&#39;category&#39;:&#39;全网顶导&#39;,&#39;action&#39;:&#39;点击按钮&#39;,&#39;label&#39;:&#39;全网顶导_点击按钮_注册&#39;});">注册</a>
+                    </div>
+                    <div class="login-status" style="display:inline-block;width:180px;">
+                        <div id="login-useName" style="display:inline-block;padding-left:30px;">潘璠</div>
+                        <div onclick="javascript:logout();" style="display:inline-block;">注销</div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu">
+                私人订制宝典
+                <a href="javascript:history.back()">&lt;返回</a>
+            </div>
+        </div>
+        <div class="content">
+            <img src="./quest_files/cat_help.png" alt="" class="cat_help">
+            <div class="quest">
+                <div class="quest_one">
+                    <div class="title">
+                        <em>1</em>
+                        <span>您的性别？</span>
+                    </div>
+                    <div class="option_a">
+                        <input type="radio" name="one" value="a" class="one"><span class="nan">男</span>
+                        <input type="radio" name="one" value="b" class="two"><span class="nv">女</span>
+                    </div>
+                </div>
+                <div class="quest_two">
+                    <div class="title">
+                        <em>2</em>
+                        <span>您从事工程机械行业哪个领域的工作？</span>
+                    </div>
+                    <div class="option">
+                        <p>
+                            <input type="radio" name="two" value="a">
+                            <span>A. 矿上挖掘，采石等重型作业</span>
+                        </p>
+                         <p>
+                            <input type="radio" name="two" value="b">
+                            <span>B. 建筑土方，道路维修等一般作业</span>
+                        </p>
+                         <p>
+                            <input type="radio" name="two" value="c">
+                            <span>C. 租赁和二手设备行业</span>
+                        </p>
+                         <p>
+                            <input type="radio" name="two" value="d">
+                            <span>D. 以上都做</span>
+                        </p>
+                         <p>
+                            <input type="radio" name="two" value="e">
+                            <span>E. 其他领域</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="quest_two">
+                    <div class="title">
+                        <em>3</em>
+                        <span>您在工程机械行业工作多久了？</span>
+                    </div>
+                    <div class="option">
+                        <p>
+                            <input type="radio" name="three" value="a">
+                            <span>A. 一年以下</span>
+                        </p>
+                         <p>
+                            <input type="radio" name="three" value="b">
+                            <span>B. 一年以上，三年以下</span>
+                        </p>
+                         <p>
+                            <input type="radio" name="three" value="c">
+                            <span>C. 五年以上，十年以下</span>
+                        </p>
+                         <p>
+                            <input type="radio" name="three" value="d">
+                            <span>D. 十年以上</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="quest_two">
+                    <div class="title">
+                        <em>4</em>
+                        <span>您目前拥有的设备多为？</span>
+                    </div>
+                    <div class="option">
+                        <p>
+                            <input type="radio" name="four" value="a">
+                            <span>A. 新机器</span>
+                        </p>
+                         <p>
+                            <input type="radio" name="four" value="b">
+                            <span>B. 二手机</span>
+                        </p>
+                         <p>
+                            <input type="radio" name="four" value="c">
+                            <span>C. 尚未购买</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="quest_two">
+                    <div class="title">
+                        <em>5</em>
+                        <span>您购买Cat二手工程机械设备的渠道为？</span>
+                    </div>
+                    <div class="option">
+                        <p>
+                            <input type="radio" name="five" value="a">
+                            <span>A. 朋友或其他个人处直接购买</span>
+                        </p>
+                         <p>
+                            <input type="radio" name="five" value="b">
+                            <span>B. 通过Cat代理商购买</span>
+                        </p>
+                         <p>
+                            <input type="radio" name="five" value="c">
+                            <span>C. 到综合的二手设备经销商处购买</span>
+                        </p>
+                         <p>
+                            <input type="radio" name="five" value="d">
+                            <span>D. 我没有买过Cat二手工程机械设备</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="quest_two">
+                    <div class="title">
+                        <em>6</em>
+                        <span>您是否听说过"卡特认证二手设备(CCUE)"？</span>
+                    </div>
+                    <div class="option">
+                        <p>
+                            <input type="radio" name="six" value="a">
+                            <span>A. 听说过而且很了解</span>
+                        </p>
+                         <p>
+                            <input type="radio" name="six" value="b">
+                            <span>B. 听说过，但不是很了解</span>
+                        </p>
+                         <p>
+                            <input type="radio" name="six" value="c">
+                            <span>C. 没听说过</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="quest_2">
+                <div class="quest_seven">
+                    <div class="title_2">
+                        <em>7</em>
+                        <span>你了解"卡特认证二手设备(CCUE)"吗？</span>
+                    </div>
+                    <div class="option_2">
+                        <p>什么是"卡特认证二手设备(CCUE)"？</p>
+                        <p>哪些机器可以成为"卡特认证二手设备(CCUE)"？</p>
+                        <p>进行二手机采购时为什么要购买"卡特认证二手设备(CCUE)"？</p>
+                    </div>
+                    <input type="checkbox" name="seven" value="a" class="cb_a">
+                    <input type="checkbox" name="seven" value="b" class="cb_b">
+                    <input type="checkbox" name="seven" value="c" class="cb_c">
+                </div>
+                <div class="quest_eight">
+                    <div class="title_2">
+                        <em>8</em>
+                        <span>我想更多关注以下哪些问题？</span>
+                    </div>
+                    <div class="option_2">
+                        <p>什么是"卡特认证二手设备(CCUE)"？从哪里可以买得到</p>
+                        <p>卡特认证的二手设备同一般的卡特二手设备有什么区别</p>
+                        <p>从Cat代理商那里买二手挖掘机可以融资吗？具体什么政策？</p>
+                        <p>如何判断一台机器的真实性？</p>
+                        <p>为什么机器状况看上去很相似的两台机器，价格会相差那么大？</p>
+                        <p>从Cat代理商那里购买"卡特认证二手设备(CCUE)"有质保吗？这里所说的质保和新机的质保有什么区别</p>
+                        <p>因为很多二手机市场都是一次性全款交易，那么购买二手Cat挖机是否意味要有雄厚的财力</p>
+                        <p>什么样的设备才有可能成为"卡特认证二手设备(CCUE)"</p>
+                        <p>异地买的二手设备，在当地是否能买到配件和进行维修？</p>
+                    </div>
+                    <input type="checkbox" name="eight" value="a" class="cp_a">
+                    <input type="checkbox" name="eight" value="b" class="cp_b">
+                    <input type="checkbox" name="eight" value="c" class="cp_c">
+                    <input type="checkbox" name="eight" value="d" class="cp_d">
+                    <input type="checkbox" name="eight" value="e" class="cp_e">
+                    <input type="checkbox" name="eight" value="f" class="cp_f">
+                    <input type="checkbox" name="eight" value="g" class="cp_g">
+                    <input type="checkbox" name="eight" value="h" class="cp_h">
+                    <input type="checkbox" name="eight" value="i" class="cp_i">
+                </div>
+            </div>
+            <div class="quest_3">
+                <img src="./quest_files/people.png" alt="">
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <a href="file:///D:/%E5%89%8D%E9%A1%B9%E7%9B%AE/CAT%E5%B8%AE%E5%B8%AE%E5%BF%99%E5%9B%9B%E6%9C%9F/2g/quest.html###" class="submit"></a>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer_one">
+                <a href="file:///D:/%E5%89%8D%E9%A1%B9%E7%9B%AE/CAT%E5%B8%AE%E5%B8%AE%E5%BF%99%E5%9B%9B%E6%9C%9F/2g/p_2g01.html" onclick="dataLayer.push({&#39;event&#39;:&#39;click&#39;,&#39;category&#39;:&#39;全网底导&#39;,&#39;action&#39;:&#39;点击按钮&#39;,&#39;label&#39;:&#39;全网底导_点击按钮_首页&#39;});">首页</a>
+                <a href="file:///D:/%E5%89%8D%E9%A1%B9%E7%9B%AE/CAT%E5%B8%AE%E5%B8%AE%E5%BF%99%E5%9B%9B%E6%9C%9F/2g/p_2g02.html" onclick="dataLayer.push({&#39;event&#39;:&#39;click&#39;,&#39;category&#39;:&#39;全网底导&#39;,&#39;action&#39;:&#39;点击按钮&#39;,&#39;label&#39;:&#39;全网底导_点击按钮_产品&#39;});">产品</a>
+                <a href="file:///D:/%E5%89%8D%E9%A1%B9%E7%9B%AE/CAT%E5%B8%AE%E5%B8%AE%E5%BF%99%E5%9B%9B%E6%9C%9F/2g/p_2g12.html" class="a" onclick="dataLayer.push({&#39;event&#39;:&#39;click&#39;,&#39;category&#39;:&#39;全网底导&#39;,&#39;action&#39;:&#39;点击按钮&#39;,&#39;label&#39;:&#39;全网底导_点击按钮_帮帮忙&#39;});">帮帮忙</a>
+                <a href="file:///D:/%E5%89%8D%E9%A1%B9%E7%9B%AE/CAT%E5%B8%AE%E5%B8%AE%E5%BF%99%E5%9B%9B%E6%9C%9F/2g/p_2g24.html" onclick="dataLayer.push({&#39;event&#39;:&#39;click&#39;,&#39;category&#39;:&#39;全网底导&#39;,&#39;action&#39;:&#39;点击按钮&#39;,&#39;label&#39;:&#39;全网底导_点击按钮_俱乐部&#39;});">俱乐部</a>
+            </div>
+            <div class="footer_two">
+                <a href="file:///D:/%E5%89%8D%E9%A1%B9%E7%9B%AE/CAT%E5%B8%AE%E5%B8%AE%E5%BF%99%E5%9B%9B%E6%9C%9F/2g/quest.html###" class="twog" onclick="dataLayer.push({&#39;event&#39;:&#39;click&#39;,&#39;category&#39;:&#39;全网底导&#39;,&#39;action&#39;:&#39;点击按钮&#39;,&#39;label&#39;:&#39;全网底导_点击按钮_2G版&#39;});"></a>
+                <a href="file:///D:/%E5%89%8D%E9%A1%B9%E7%9B%AE/CAT%E5%B8%AE%E5%B8%AE%E5%BF%99%E5%9B%9B%E6%9C%9F/2g/3g.html" onclick="dataLayer.push({&#39;event&#39;:&#39;click&#39;,&#39;category&#39;:&#39;全网底导&#39;,&#39;action&#39;:&#39;点击按钮&#39;,&#39;label&#39;:&#39;全网底导_点击按钮_3G版&#39;});"></a>
+            </div>
+            <div class="footer_three">© 2014 卡特彼勒保留所有权利</div>
+        </div>
+    </div>
+
+<script>
+    // var sUserAgent = navigator.userAgent.toLowerCase();
+    // if (sUserAgent.indexOf("ucbrowser") == -1){
+    //     includeLinkStyle("css/p_2g06_1.css");
+    // }
+    // if (sUserAgent.indexOf("ucbrowser") > 0){
+    //     $(".login-status #login-useName").css({'font-size':'14px','width':'80px'});
+    //     $(".login-status div:nth-child(2)").css({'font-size':'14px','width':'75px'});
+    // }
+	function resetPage() {
+		var deviceWidth = document.documentElement.clientWidth,
+		scale = deviceWidth/640;
+		document.body.style.zoom = scale;
+	}
+	window.onresize = function(){
+		resetPage();
+	}
+/*数据提交*/
+$('.submit').click(function(){
+    /*单选*/
+    var one = $("input[name='one']:checked").val();
+    var two = $("input[name='two']:checked").val();
+    var three = $("input[name='three']:checked").val();
+    var four = $("input[name='four']:checked").val();
+    var five = $("input[name='five']:checked").val();
+    var six = $("input[name='six']:checked").val();
+    var nine = $('textarea').val();
+    /*多选*/
+    var _eight = "",_seven = "";
+    var quest_eight = document.getElementsByClassName('quest_eight')[0];
+    var eight = quest_eight.getElementsByTagName('input');
+    var quest_seven = document.getElementsByClassName('quest_seven')[0];
+    var seven = quest_seven.getElementsByTagName('input');
+    var huoqu = localStorage.getItem('userid');
+    for(var i = 0;i < eight.length;i ++){
+        if(eight[i].checked){
+            _eight+=eight[i].value+",";
+        }
+    }
+    for(var i = 0;i < seven.length;i ++){
+        if(seven[i].checked){
+            _seven+=seven[i].value+",";
+        }
+    }
+    if($("input[name='one']:checked").val() == undefined){
+        alert('请选择性别！');
+        return;
+    }else if($("input[name='two']:checked").val() == undefined){
+        alert('请选择您的工作领域！');
+        return;
+    }else if($("input[name='three']:checked").val() == undefined){
+        alert('请选择您在此行业的工作多久！');
+        return;
+    }else if($("input[name='four']:checked").val() == undefined){
+        alert('请选择您目前拥有的设备！');
+        return;
+    }else if($("input[name='five']:checked").val() == undefined){
+        alert('请选择您的购买渠道！');
+        return;
+    }else if($("input[name='six']:checked").val() == undefined){
+        alert('请选择您是否听说过"卡特认证二手设备(CCUE)"');
+        return;
+    }else if(!_seven){
+        alert('请选择你了解"卡特认证二手设备(CCUE)吗？"');
+        return;
+    }else if(!_eight){
+        alert('请选择您要关注的问题！');
+        return;
+    }
+    // else if(!nine){
+    //     alert('请填写您的问题！');
+    //     return;
+    // }
+    var url = 'http://newcms.mobile1.com.cn/advmessage/adv/addResult.action?advid=20076&expand1=q1-' + one + ';q2-' + two + ';q3-' +three + ';q4-' + four + ';q5-' + five + ';q6-' + six + ';q7-' + _seven + ';q8-' + _eight + ';uid-' + huoqu + '&description=' + nine;
+    $.ajax({
+        type: "post",
+        url: url,
+        dataType : 'json',
+        success:function(data){
+            // alert(JSON.stringify(data));
+            window.location.href = "answer.html?sex=" + one + '&q2=' + two + '&q3=' + three + '&q7=' + _seven + '&q8=' + _eight;
+        }
+    });
+    // var url2 = 'http://test.zhangkuo.net/advmessage/advthird/accessJsonP.action';
+    // $.ajax({
+    //     type: "post",
+    //     url: url2,
+    //     submitinfo:{
+    //         'url':'http://catsite.ogilvy.com.cn/club/Home/AddAnswer',
+    //         'data':{
+    //             'q1':one,
+    //             'q2':two,
+    //             'q3':three,
+    //             'q4':four,
+    //             'q5':five,
+    //             'q6':six,
+    //             'q7':_seven,
+    //             'q8':_eight,
+    //             'q9':nine,
+    //             'uid':huoqu
+    //         }
+    //     },
+    //     dataType : 'json',
+    //     success:function(data){
+    //         alert(JSON.stringify(data));
+    //     }
+    // });
+});
+</script>
+<div class="cover"></div></body></html>

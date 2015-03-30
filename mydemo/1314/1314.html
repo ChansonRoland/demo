@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)http://pc.hezhanglin.com:33/h5/ad/ad_dianxiao/ctf/1314/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0,  minimum-scale=1.0, maximum-scale=1.0">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<title></title>
+<link href="./1314_files/index.css" type="text/css" rel="stylesheet">
+<script src="./1314_files/channel.js"></script>
+<script src="./1314_files/jquery-1.4.4.min.js"></script>
+<script src="./1314_files/jquery.cookie.js"></script>
+<script src="./1314_files/iscroll.js"></script>
+<script src="./1314_files/guid.js"></script>
+<script src="./1314_files/trackEvent.js"></script>
+<script src="./1314_files/control.js"></script>
+<style>
+html,body{background-color:#f1d5c2;}
+</style>
+<script>
+var _is,_i=1;
+$(document).ready(function(e) {
+	$.ajax({
+		url: action_url + "/advmessage/adv/resultList.action?limit=100&expand2=1&advid=" + advid,
+		cache: false,
+		dataType: 'jsonp',
+		jsonpCallback: "eventcallback_m1_1",
+		timeout: 3500,
+		success: function (data) {
+			var html = '';
+			for(var i =0;i<data.list.length;i++){
+				html += '<li id="bb_'+i+'">'+data.list[i].realname+'：'+data.list[i].description+'</li>';
+			}
+			$("#bb ul").html(html);
+			_is = new iScroll("bb",{hScrollbar:false,vScrollbar:false});
+			_is.refresh();
+			
+			setInterval(function(){
+				var el = $("#bb_"+_i);
+				if(el.length > 0){
+					_is.scrollToElement(el[0],400);
+					_i++;
+				}else{
+					_i = 0;
+				}
+			},3000);
+		},
+		error: function () {
+
+		}
+	});
+	
+	
+	
+	
+	
+	
+	//track(channel,5449);
+});
+
+</script>
+</head>
+
+<body onclick="$(&#39;#nav,#v2,#v3&#39;).hide();" style="zoom: 0.915625;">
+<div class="fxbg">
+<img class="img" src="./1314_files/1.jpg" alt="">
+<div class="btn1">
+	<a href="http://pc.hezhanglin.com:33/h5/ad/ad_dianxiao/ctf/1314/m1.html" id="v1" class="fly"></a>
+	<img class="img fly" src="./1314_files/nav.png" alt="" id="nav" style="display: none;">
+	<div class="fly" id="bb" style="overflow: hidden;">
+		<ul style="transition-duration: 0ms; -webkit-transition-duration: 0ms; transform-origin: 0px 0px 0px; position: absolute; top: -447px; left: 0px;"><li id="bb_0">Q：Q</li><li id="bb_1">踩踩踩踩：11</li><li id="bb_2">踩踩踩踩：11</li><li id="bb_3">121：请问请问</li><li id="bb_4">1：求</li><li id="bb_5">Dd：Ss</li><li id="bb_6">Jh：Hajj</li><li id="bb_7">1231：为期为此</li><li id="bb_8">和小嫩：亲爱的，第一次的相遇，现在的相守，未来的相伴，希望我们永远幸福的走下去！</li><li id="bb_9">日：潇洒</li><li id="bb_10">爱你的老公LZY：老婆虽然你在洛杉矶 我在桂林但咱们顶着十六个小时跨的1314年 但时间距离都不能让我们分离 老婆我将会在你学成归来用周大福的戒指套住你一辈子！</li><li id="bb_11">李军：用一辈子來守候你，春春老婆。，</li><li id="bb_12">蔡小贱：相恋时的热度，初结婚的高度，不如一生一世的“温”度，卢小仙，让我们温暖一辈子吧！</li><li id="bb_13">高景京：我爱你老婆一生一世</li><li id="bb_14">李敏仪：我不求锦衣，不求大富大贵！只求相濡而沫！包容你我！爱情面包相兼顾，坦诚相对！</li><li id="bb_15">启：我爱你</li><li id="bb_16">东福天：感谢你陪我度过2013-2014我最爱的人我希望你永远都别离开我</li><li id="bb_17">妍：love you</li><li id="bb_18">妍：love you</li><li id="bb_19">爱慕西♣：亲爱的，我们一路走过来有苦有甜。感谢你每次的宽容，不管发生什么，你始终现在我身旁，陪着我。
+谢谢你不介意爱这个千疮百孔的我，带我走出那片沼泽。
+
+
+我爱你╰wbj</li><li id="bb_20">于浩洋：从认识到喜欢再到我爱你，从宝贝到亲爱的再到老婆，不求永恒只求这辈子我们能在一起，你，永远是我心中的最爱！</li><li id="bb_21">伟：阿珊：有你的陪伴是我最大的幸福，谢谢你</li><li id="bb_22">爱你的芦苇：亲爱的三爷：从13走到14，幸福、惊喜、伤痛、再到幸福，感谢有你的陪伴，钟爱一生！</li><li id="bb_23">罗育添：亲爱的冰:老婆我爱你一生一世！爱你一万年！</li><li id="bb_24">霜霜：亲爱的，在一起已经七年了，我们从朋友，到家人，共同经历了生活给我们带来的酸甜苦辣，2013年10月9日，你牵起我的手走向了婚礼的殿堂，告诉我“会照顾我一生一世”。谢谢你，这么多年都疼我，爱我，像刚认识一样～永远爱你～</li><li id="bb_25">杨林峰：曾经结婚时，我们并不富有，人生留下了遗憾，而代表永恒的结婚戒指永远在我心中!</li><li id="bb_26">小白：大黑，跟你一起五年多了，还记得你给我暖脚，还记得你为我哭，还记得我们一起的生日，明年就要结婚了，希望我们可以一直这样下去。我爱你。</li><li id="bb_27">小超人：爱需要理解包容和忍让，也许我不是最爱你的，但是我一定是永远和你在一起、相濡以沫的那位爱人</li><li id="bb_28">啦啦：爱你哟，亲</li><li id="bb_29">刘：只要你愿意！我便不放弃！</li><li id="bb_30">鹏总理：琪儿 ，从听说你的那一刻起 一颗心为你悸动 我也不知道为什么我认为你肯定是个漂亮的人 。琪儿，对我，非你莫属。</li><li id="bb_31">爱佳的磊：我爱你和孩子。我会努力让你们幸福快了的。 
+         加油</li><li id="bb_32">爱佳的磊：我爱你和孩子。我会努力让你们幸福快了的。 
+         加油</li><li id="bb_33">无名：1314好</li><li id="bb_34">Akill雪：加油</li><li id="bb_35">曹方惠：老婆一生一世只爱你</li><li id="bb_36">陆志勤：亲爱的老公你是老天赐给我最好的礼物</li><li id="bb_37">屠志凤：幸福延续到老</li><li id="bb_38">屠志凤：一直幸福下去</li><li id="bb_39">吴梨君：与你相识的每一天都是开心幸福的，虽然有过争吵，但一点也不影响我们的感情！愿我们的爱一生一世一脉相承！</li><li id="bb_40">游：刘美！    
+我爱你1314</li><li id="bb_41">雪：不需要轰轰烈烈，只愿平平淡淡，1314，相濡以沫！</li><li id="bb_42">niekang：我喜欢你，我跟你一起度过了2013年的最后一天，跟你一起迎接了2014的第一天，我还要跟你一起过201413，我还要跟你一生一世</li><li id="bb_43">刘剑利：从13年到14年，雪，愿我们一生一世在一起，永不分离！扎西德勒！</li><li id="bb_44">安小欣：回忆点点滴滴，每天你都在我心里，我真的爱你。</li><li id="bb_45">Helen：生活中的点滴见证着我们的爱情，老公牵着我的手1314!</li><li id="bb_46">琳琳：今生今世，我们会永远在一起！！</li><li id="bb_47">林：愿与你一生相随</li><li id="bb_48">李明哲：不管13还是14，我将用我的全部，陪你走过剩下的岁月。</li><li id="bb_49">谭玲翔：小呆，其实我一直都深深的爱着你，你的一切我都在关注着，直到那天你问我我便毫不犹豫的就回答了，我爱你！我想和你一生一世相濡以沫！      
+        我爱你，小呆！</li><li id="bb_50">回忆：今生只为你</li><li id="bb_51">汪33：爱你</li><li id="bb_52">汪33：虽然在一起有许多的磕磕碰碰牵绊着我们，但是在新的一年里希望霉运走光光，好运接踵来！也希望你能再成熟点，别老</li><li id="bb_53">丨：刂</li><li id="bb_54">爱你的老公泓博：新的一年新的开始，老婆，不多说，就一句话，我会加倍爱你，疼你！把最好的都给你！这辈子你要不欺负我我都活不起了！</li><li id="bb_55">王大明：白首不相离，执子之手与子偕老
+爱生活，爱家庭</li><li id="bb_56">爱你的超人：亲爱的宇儿:
+     虽是短暂的相识,见你第一面的瞬间,你有趣的谈笑间,融入了我的心田,虽是短暂的时间,那些第一次的默契感,我们有趣的话语间,载入了我们共渡1314的祝愿!</li><li id="bb_57">赵亮：胡艳老公爱你，我想和你一起走过一生一世</li><li id="bb_58">糖糖：谢谢亲爱的'爱你到永远</li><li id="bb_59">爱宝贝：亲爱的帅老公，感谢你对我的爱！</li><li id="bb_60">洋仔：亲爱的小娜'愿我们永不分离'好好爱对方'爱你一生一世！我爱你'娜</li><li id="bb_61">毛毛虫：梅，感谢上苍让我今生能够遇见你，并且相知相爱！在这特殊的时刻，我要大声说出我的承诺，梅梅，我会爱你-生-世！</li><li id="bb_62">张鹏：亲爱的，谢谢你陪我跨过1314!有你的每一天我都幸福的不得了，有欢声笑语有闹过不愉快。可就因为彼此相爱。不想失去对方一直从相识相知到相爱！珍惜有你的</li><li id="bb_63">聪聪：大臭臭老公，真的想就这样的跟你一直走下去，你若相濡我便以沫，你若不离，我亦不弃！你的过去我来不及参与，但你的将来一定会有我的陪伴！同甘共苦，风雨同舟！</li><li id="bb_64">l李剑：亲爱的，很感激上帝在我们几乎要错过彼此的时候安排我们相遇，我知道你的所有，但这些并不会成为我继续爱你的障碍，我不知道你有多爱我，但是我知道你爱我一定不比我爱你少。我们的路会很坎坷，但我希望你不要放开我的手，带我走过漫漫长路，保护我，让我永远不用看到世间的险恶，我相信，相爱的人运气不会太差，愿主保佑我们。我想告诉你，遇见你，是我此生最美丽的意外~</li><li id="bb_65">聪聪：大臭臭老公，感谢这一路走来你对我的包容与迁就，我很感谢也很感恩，能够转角遇到你，能够与你从13走到14，我也希望在这个特别的日子里就这样的和你手牵手走到一生一世，爱你！</li><li id="bb_66">王开峰：缘由天定，份由己为。感谢让我们相遇，感谢你的陪伴。经过了1314。感谢有你，你若不离我定不弃！！</li><li id="bb_67">李遵：春春，老公爱你一生一世。</li><li id="bb_68">姚：老婆.谢谢有你。让我在13亿人口里面认识了你.我会给你幸福的.</li><li id="bb_69">李军：老婆，谢谢你陪我走过了1314，这一辈子有你值得</li><li id="bb_70">刘琳：老公今生谢谢有你的陪伴，在老的时候还希望你牵着我的手一起去钓鱼</li><li id="bb_71">刘琳：老公今生谢谢有你的陪伴，在老的时候还希望你牵着我的手一起去钓鱼</li><li id="bb_72">付艳秋：你若不离不弃，我必生死相依！我希望将来有一天，我们都满头白发，坐在老人椅上，诉说过去！</li><li id="bb_73">李静：愿老公工作顺利，儿子身体健康</li><li id="bb_74">小⑦：掩埋岁月，可是掩埋不了我对你的爱。朱</li><li id="bb_75">小⑦：只愿我们一起携手白头到老！</li><li id="bb_76">malan：xdj：
+       远处的我在挂念你，你是否也在想我。</li><li id="bb_77">路小妞：小胖永远爱我</li><li id="bb_78">路小姐：希望14年小胖能跟我求婚</li><li id="bb_79">路小姐：希望小胖胖永远爱我</li><li id="bb_80">路小姐：希望跟小胖胖永远幸福美满</li><li id="bb_81">路小姐：希望跟何小胖跟幸幸福福、开心的一起走下去</li><li id="bb_82">娇：你这么丑，我还是喜欢你，什么时候向我求婚呢？</li><li id="bb_83">邱盼：这样爱着你还有我们得宝贝，相爱到老</li><li id="bb_84">烆：生活的平淡，让我遇到了平淡的你。爱别说出口，就让岁月来证明。</li><li id="bb_85">An：只期待平平淡淡，健康到老，还能一起手牵手到老，还可以一起手牵手看日岀看日落，那就是幸福……我们都会幸福的，亲！！</li><li id="bb_86">静：一生一世，永随。</li><li id="bb_87">许国贞：牵着手，唠着嗑，就这样老去</li><li id="bb_88">SS：一生一世、我爱的你</li><li id="bb_89">双：希望我能一直陪在你身边</li><li id="bb_90">gq：执子之手，与子偕老</li><li id="bb_91">gg：从09年到现在，我们有过争吵，有过分手，但是爱你的心从未有过半点改变，相信你也是，你说现在的感觉我们更像亲人了，就是离不开，那我们就相依相偎一辈子！</li><li id="bb_92">杨转蔚：你是我生命中挺重要一人，我不能离开你！</li><li id="bb_93">刘雷：我爱你从13到一14，</li><li id="bb_94">刘仁垒：愿得一人心，白首不分离。</li><li id="bb_95">anan：宝贝，不管未来的路有多艰难，我们都要一起走下去，谢谢你陪我走过13走向14，未来我们还有更远的路～走到白发苍苍，走到儿孙满堂，走到天荒地老～</li><li id="bb_96">anan：宝贝，不管未来的路有多艰难，我们都要一起走下去，谢谢你陪我走过13走向14，未来我们还有更远的路～走到白发苍苍，走到儿孙满堂，走到天荒地老～</li><li id="bb_97">anan.：宝贝，不管未来的路有多艰难，我们都要一起走下去，谢谢你陪我走过13走向14，未来我们还有更远的路～走到白发苍苍，走到儿孙满堂，走到天荒地老～</li><li id="bb_98">阿奸同学儿：宝贝，不管未来的路有多艰难，我们都要一起走下去，谢谢你陪我走过13走向14，未来我们还有更远的路～走到白发苍苍，走到儿孙满堂，走到天荒地老～</li><li id="bb_99">发货：大家</li></ul>
+	</div>
+	
+	<a href="http://pc.hezhanglin.com:33/h5/ad/ad_dianxiao/ctf/1314/index.html" id="m1" class="fly"></a>
+    <a href="http://pc.hezhanglin.com:33/h5/ad/ad_dianxiao/ctf/1314/m2.html" id="m2" class="fly"></a>
+    <a href="http://pc.hezhanglin.com:33/h5/ad/ad_dianxiao/ctf/1314/m3.html" id="m3" class="fly"></a>
+	<a href="http://a1783.oadz.com/link/C/1783/1250/KxhQqHV7AvvSOwSgS0xVILbhJ2s_/p01b/0/http://www.ctfeshop.com.cn/" id="v2" class="fly" style="display: none;"></a>
+	<a href="http://pc.hezhanglin.com:33/h5/ad/ad_dianxiao/ctf/1314/m4.html" id="v3" class="fly" style="display: none;"></a>
+    <a href="javascript:$('#nav,#v2,#v3').show();" id="m4" class="fly"></a>
+</div>
+</div>
+
+
+</body></html>

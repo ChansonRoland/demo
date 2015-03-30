@@ -1,0 +1,219 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+a{
+	display: inline-block;
+}
+.one{
+	width: 640px;
+	height: 762px;
+	background: url(../images/header.jpg) 0 100px no-repeat;
+	position: relative;
+}
+.onefix{
+	width: 640px;
+	height: 100px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: url(../images/one1.jpg);
+	z-index: 3;
+}
+.one1{
+	width: 180px;
+	height: 50px;
+	top: 25px;
+	right: 30px;
+	position: absolute;
+}
+.one2{
+	width: 282px;
+	height: 68px;
+	bottom: 28px;
+	left: 30px;
+	position: absolute;
+}
+.one3{
+	width: 282px;
+	height: 68px;
+	bottom: 28px;
+	right: 30px;
+	position: absolute;
+}
+.two{
+	width: 640px;
+	height: 94px;
+	background: url(../images/two.jpg);
+	position: relative;
+}
+.two a{
+	float: right;
+	width: 102px;
+	height: 94px;
+}
+.two1{
+	margin-right: 30px;
+}
+.three{
+	width: 640px;
+	height: 675px;
+	background: url(../images/three.jpg);
+	position: relative;
+}
+.three1{
+	width: 203px;
+	height: 58px;
+	position: absolute;
+	bottom: 34px;
+	left: 42px;
+}
+.four{
+	width: 640px;
+	height: 734px;
+	background: url(../images/four.jpg);
+	position: relative;
+}
+.four1{
+	width: 203px;
+	height: 58px;
+	position: absolute;
+	bottom: 56px;
+	left: 44px;
+}
+.five{
+	height: 370px;
+	width: 640px;
+}
+.six{
+	width: 640px;
+	height: 1142px;
+	background: url(../images/six.jpg);
+	position: relative;
+}
+.six1{
+	position: absolute;
+	top: 290px;
+	left: 38px;
+	width: 338px;
+	height: 60px;
+}
+.six2{
+	position: absolute;
+	top: 620px;
+	left: 38px;
+	width: 180px;
+	height: 60px;
+}
+.six3{
+	position: absolute;
+	bottom: 130px;
+	left: 38px;
+	width: 180px;
+	height: 60px;
+}
+/*浮层*/
+.bj{
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #000;
+	opacity: 0.7;
+	width: 100%;
+	height: 100%;
+}
+.fixFrame{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width:500px;
+	height:700px;
+}
+.oneH{
+	width: 500px;
+	height: 104px;
+	background: url(../images/oneH.png);
+	background-size: 500px 104px;
+}
+.fix{
+	width: 484px;
+	height: 800px;
+	background: url(../images/fix.png) no-repeat;
+	background-size: 484px 800px;
+	overflow:auto;
+}
+.fixS{
+	width: 484px;
+	height: 596px;
+	overflow: auto;
+	background: #fff;
+}
+.fix2{
+	width: 484px;
+	height: 860px;
+	background: url(../images/fix2.png) no-repeat;
+	background-size: 484px 800px;
+}
+.fix2Frame{
+	width: 500px;
+	height: 700px;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.fix2H{
+	width: 500px;
+	height: 158px;
+	background: url(../images/fix2H.png);
+	background-size: 500px 158px;
+}
+.fix2S{
+	width: 484px;
+	height: 596px;
+	overflow: auto;
+	background: #fff;
+}
+.off,.off2{
+	width: 70px;
+	height: 70px;
+	background: orange;
+	margin-left: 430px;
+	border: none;
+	opacity: 0;
+}
+#roll{
+	background: #fff;
+	width: 460px;
+	height: 230px;
+	margin: 430px 0 0 20px;
+	overflow: hidden;
+}
+#scroller{
+	width: 1380px;
+	height: 230px;
+}
+#scroller li{
+	width: 460px;
+	height: 230px;
+	float: left;
+	font-size: 20px;
+}
+.fix a{
+	display: inline-block;
+	width: 460px;
+	height: 80px;
+	margin: 0 10px;
+}
+.di{
+	text-align: center;
+}
+.di li{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background: #cacaca;
+	border-radius: 50%;
+	margin: 15px 10px;
+}
